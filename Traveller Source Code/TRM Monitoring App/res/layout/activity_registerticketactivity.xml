@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="2dp"
+    android:padding="2dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/boundary_chart"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/detailed_mr_card_header"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Register Ticket"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/White"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/detailed_mr_card_row_dark"
+            android:gravity="left|center"
+            android:visibility="gone"
+            android:weightSum="2" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="Ticket No *"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ticketno"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_out_line"
+                android:focusable="false"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="Ticket001"
+                android:textColor="@color/Black"
+                android:textStyle="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/detailed_mr_card_row_dark"
+            android:gravity="left|center"
+            android:weightSum="2" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="Officer Name.*"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/officername"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/blue_out_line"
+                android:focusable="false"
+                android:gravity="left|center"
+                android:hint="Name"
+                android:paddingLeft="10dp"
+                android:textColor="@color/Black"
+                android:textStyle="bold" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/detailed_mr_card_row_light"
+            android:gravity="left|center"
+            android:weightSum="2" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="Mobile No.*"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/mobilenumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/blue_out_line"
+                android:gravity="left|center"
+                android:hint="Mobile No."
+                android:inputType="phone"
+                android:maxLength="10"
+                android:paddingLeft="10dp"
+                android:textColor="@color/Black"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/detailed_mr_card_row_dark"
+            android:gravity="left|center"
+            android:weightSum="2" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="Email Id."
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/emailid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/blue_out_line"
+                android:gravity="left|center"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                android:textColor="@color/Black"
+                android:textStyle="" />
+        </LinearLayout>
+
+        
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/detailed_mr_card_row_light"
+            android:gravity="left|center"
+            android:weightSum="2" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="Category *"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:textColor="@color/Black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/detailed_mr_card_row_dark"
+            android:gravity="left|center"
+            android:weightSum="2" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="Sub-category *"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/subcategory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:textColor="@color/Black"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/detailed_mr_card_row_light"
+            android:gravity="left|center"
+            android:weightSum="2" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|top"
+                android:padding="10dp"
+                android:text="Description*"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/blue_out_line"
+                android:gravity="left|top"
+                android:hint="Description"
+                android:padding="10dp"
+                android:textColor="@color/Black"
+                android:textStyle="" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/rregister"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@color/detailed_mr_card_header"
+            android:text="Register"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+</ScrollView>

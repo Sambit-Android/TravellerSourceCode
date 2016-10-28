@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+     android:background="@color/grey"
+    android:scrollbars="none" >
+    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+        </LinearLayout>
+        
+    
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+            
+            
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tvreleasedate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fitsSystemWindows="true"
+                android:focusableInTouchMode="true"
+                android:text=" Date of Install"
+                android:textStyle="bold" >
+            </TextView>
+
+            <Button
+                android:id="@+id/editdate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_weight="1.3"
+                android:textSize="25sp"
+               android:textColor="@color/Red">
+
+                <requestFocus>
+                </requestFocus>
+            </Button>
+        </LinearLayout>
+        
+            
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tvserial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fitsSystemWindows="true"
+                android:focusableInTouchMode="true"
+                android:text="Meter Serial No"
+                android:textStyle="bold" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/edtserial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_weight="1.3"
+                android:inputType="number" >
+
+                <requestFocus>
+                </requestFocus>
+            </EditText>
+        </LinearLayout>
+        
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal" 
+             android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/tvmetermake"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hapticFeedbackEnabled="true"
+                android:text="Meter Make"
+                android:textStyle="bold" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/spnmetermake"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:entries="@array/meter_make" />
+        </LinearLayout>
+            
+           <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal"
+             android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/tvmetercapacity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hapticFeedbackEnabled="true"
+                android:text="Meter Capacity"
+                android:textStyle="bold" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/spnmetercapacity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:entries="@array/meter_capacity" />
+        </LinearLayout>
+        
+           <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal"
+             android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/tvmtrcover"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hapticFeedbackEnabled="true"
+                android:text="Meter Cover"
+                android:textStyle="bold" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/spnmetercover"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:entries="@array/meter_cover" />
+        </LinearLayout>
+           
+       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal"
+             android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/tvmtrposition"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hapticFeedbackEnabled="true"
+                android:text="Meter Position"
+                android:textStyle="bold" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/spnmeterposition"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:entries="@array/meter_position" />
+        </LinearLayout>
+           
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal"
+             android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/tvmtrtype"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hapticFeedbackEnabled="true"
+                android:text="Meter Type"
+                android:textStyle="bold" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/spnmetertype"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:entries="@array/meter_type" />
+        </LinearLayout>   
+           
+           
+           <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/presentreading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fitsSystemWindows="true"
+                android:focusableInTouchMode="true"
+                android:text="Meter IR"
+                android:textStyle="bold" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/presentreadin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_weight="1.3"
+                android:inputType="number" >
+
+                <requestFocus>
+                </requestFocus>
+            </EditText>
+        </LinearLayout>
+        
+             
+           <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/meterconstantt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fitsSystemWindows="true"
+                android:focusableInTouchMode="true"
+                android:text="Meter Constant"
+                android:textStyle="bold" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/meterconstanted"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_weight="1.3"
+                android:inputType="numberDecimal"
+                android:maxLength="4" >
+
+                <requestFocus>
+                </requestFocus>
+            </EditText>
+        </LinearLayout>
+           
+        
+     
+           <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+               android:background="@drawable/border"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imgSetImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:background="@android:drawable/ic_menu_camera" />
+
+                <Button
+                    android:id="@+id/btnCapture"
+                    style="@style/btnJvnnlBlue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Capture Meter" 
+                     android:background="@drawable/border_orange"/>
+            </LinearLayout>
+           
+           
+    </LinearLayout>
+        
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="3dp"
+             android:gravity="center|right"
+             android:orientation="horizontal" >
+
+             <Button
+                 android:id="@+id/next"
+                 style="@style/btnJvnnlBlue"
+                 android:layout_width="100dp"
+                 android:layout_height="50dp"
+                 android:layout_gravity="right|center_vertical"
+                 android:layout_marginLeft="10dp"
+                 android:layout_weight="1.01"
+                 android:background="@drawable/border_orange"
+                 android:text="Next"
+                 android:textSize="19sp" >
+             </Button>
+         </LinearLayout>
+      
+    </LinearLayout>
+
+</ScrollView>
+
+

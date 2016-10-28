@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TRM MONITORING APP</string>
+     <string name="settingsstring">Settings</string>
+    <string name="select">Choose One</string>
+    <string name="change">Change Language!</string>
+    <string name="selectlanguage">Change Language!</string>
+    <string name="kannada">ಕನ್ನಡ ಭಾಷೆ</string>
+    <string name="english">English</string>
+    <string name="enumertaionip">ENUMERATION FOR IP</string>
+    <string name="enumertaiondtc">ENUMERATION FOR DTC</string>
+    <string name="surveyoverview">SURVEY OVERVIEW</string>
+    <string name="importdata">IMPORT ALL DATA</string>
+    <string name="settings">SETTINGS</string>
+    <string name="contactus">CONTACT US</string>
+    <string name="ip">IP Sets</string>
+    <string name="addip">Add IP Sets Details</string>
+    <string name="status">Inspection Status</string>
+    <string name="totalconnections">Total Connections</string>
+    <string name="totalinspections">Total Inspections</string>
+    <string name="notsynced">Not Synced to Server</string>
+    <string name="synced">Synced to Server</string>
+    <string name="upload">Upload Offline Saved Data</string>
+    <string name="uploadofflinedownloadmaster">Download Master Data</string>
+    <string name="viewaccounts">View Account Details</string>
+    <string name="accounts">Account Details</string>
+    <string name="addunauthorisedip">Add UnAuthorised IP Details</string>
+    <string name="enter">Enter RR Number/Consumer Name</string>
+    <string name="noresult">No Result Found</string>
+    <string name="meterefix">Meter Fixed</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="watersource">Water Source</string>
+    <string name="openwell"> Open Well </string>
+    <string name="canal"> Canal </string>
+    <string name="borewell"> Bore Well </string>
+    <string name="others"> Others </string>
+    <string name="specify"> Specify </string>
+    <string name="ststusofinstall"> Status of Install </string>
+    <string name="inuse"> In Use </string>
+    <string name="notinuse"> Not in Use </string>
+    <string name="dry"> Dry </string>
+    <string name="crop"> Crop </string>
+    <string name="Ragi"> Ragi </string>
+    <string name="Jowar"> Jowar </string>
+    <string name="Areca"> Areca </string>
+    <string name="Paddy"> Paddy </string>
+    <string name="Sugarcane"> Sugarcane </string>
+    <string name="Coconut"> Coconut </string>
+    <string name="Nursuries"> Nursuries </string>
+    <string name="yourdiv"> Your Division </string>
+    <string name="feeder"> Feeder Code </string>
+    <string name="DTCCODE"> DTC CODE </string>
+    <string name="DTCName"> DTC Name </string>
+    <string name="LocationInfo"> Location Info </string>
+    <string name="CaptureMode"> Capture Mode </string>
+    <string name="Northing"> Northing </string>
+    <string name="Easting"> Easting </string>
+    <string name="Latitude"> Latitude </string>
+    <string name="Longitude"> Longitude </string>
+    <string name="TrackPoint"> Track Point </string>
+    <string name="LocateMe"> View in Map </string>
+    <string name="Village"> Village </string>
+    <string name="NatureofLoad"> Nature of Load </string>
+    <string name="IPSets"> IP Sets</string>
+    <string name="WaterSupply"> WaterSupply </string>
+    <string name="MixedLoad"> Mixed Load </string>
+    <string name="Others"> Others </string>
+    <string name="Otherscomma"> Others(comma seperate if more than one) </string>
+    <string name="Specify"> Specify </string>
+    <string name="TotalIPConnected"> Total IP Connected </string>
+    <string name="LightningArresters"> Lightning Arresters </string>
+    <string name="Yes"> Yes </string>
+    <string name="No"> No </string>
+    <string name="KVGOS11"> 11 KV GOS </string>
+    <string name="HTProtection"> HT Protection </string>
+    <string name="KVHGFuse11"> 11 KV HG Fuse </string>
+    <string name="KVDOLO11"> 11 KV DOLO </string>
+    <string name="DirectConn"> Direct Connection</string>
+    <string name="LTProtection"> LT Protection </string>
+    <string name="LTPKit"> LTP Kit </string>
+    <string name="FuseCutOuts"> Fuse Cut-Outs </string>
+    <string name="DistrBox"> Distr Box </string>
+    <string name="DTCMeterFixed"> DTC Meter Fixed </string>
+    <string name="MeterWorking"> Meter Working </string>
+    <string name="ModemFixed"> ModemFixed </string>
+    <string name="StructureofPole"> Structure of Pole</string>
+    <string name="SLNumber">SL Number</string>
+    <string name="ConnectedLaod"> Connected Load </string>
+    <string name="EnterConnectedLaod"> Enter Connected Load </string>
+    <string name="OilCapacity"> Oil Capacity:  </string>
+     <string name="kvaCapacity">Capacity (KVA)  </string>
+    <string name="DTCRating"> DTC Rating </string>
+    <string name="GroundinginDTCsanditsstatus">Grounding in DTCs and its status </string>
+    <string name="Body"> Body </string>
+    <string name="Nutral"> Nutral </string>
+    <string name="Light.Arrest"> Light.Arrest </string>
+    <string name="Create">CREATE </string>
+    <string name="Cancel"> Cancel </string>
+    <string name="Previous"> Previous </string>
+    <string name="Next"> Next </string>
+    <string name="EnumerationDetails">Enumeration Details </string>
+    <string name="DateofInspection">Date of Inspection </string>
+    <string name="Circle">Circle </string>
+    <string name="Division">Division </string>
+    <string name="OandMSubDivision">O and M Sub Division </string>
+    <string name="SheetNo">Sheet-No </string>
+    <string name="OMUnit">O M Unit </string>
+    <string name="SubStation">SubStation </string>
+    <string name="FeederNoandName">FeederNoandName </string>
+    <string name="Proceed">Proceed </string>
+    <string name="Authorised">Authorised </string>
+    <string name="RRNo">RR No </string>
+    <string name="DateOfService"> Date Of Service </string>
+    <string name="CHOOSEDATE">CHOOSE DATE </string>
+    <string name="HIDEDATEPICKER"> HIDE DATE PICKER </string>
+    <string name="dtcUniqueID">DTC Unique ID </string>
+    <string name="UniqueID">Unique ID</string>
+    <string name="CustomerName">Customer Name </string>
+    <string name="PrimaryAddress">Primary Address </string>
+    <string name="SanctionedLoad">Sanctioned Load  </string>
+    <string name="VoltageDetails"> Voltage Details </string>
+    <string name="RY">RY :  </string>
+    <string name="YB">YB :   </string>
+    <string name="BR">BR :  </string>
+    <string name="CurrentDetails"> Current Details </string>
+    <string name="R">R :   </string>
+    <string name="Y">Y : </string>
+    <string name="B">B :   </string>
+    <string name="Taluk">Taluk : </string>
+    <string name="Website">Website : </string>
+    <string name="FeederType"> Feeder Type :</string>
+    <string name="CustMobileNumber"> Cust.Mobile Number </string>
+    <string name="FatherapossHusName"> Father or Hus Name </string>
+    <string name="BcitsAddress">  # 86, 3rd Cross,\nBhoopsandra Main Road,\nRMV IInd Stage, Bangalore 560094\nKarnataka, India </string>
+    <string name="Phone"> Phone : </string>
+    <string name="Fax"> Fax :  </string>
+    <string name="EnterFeederNumber"> Enter Feeder Number </string>
+    <string name="Name"> Name  </string>
+    <string name="FeederNo">Feeder No :  </string>
+    <string name="SubDivision"> Sub Division :  </string>
+    <string name="Address"> Address </string>
+    <string name="DTCNumber"> DTC Number </string>
+    <string name="CESCIPSETSANDTRANSFORMERS"> CESC IP SETS AND TRANSFORMERS </string>
+    <string name="USERNAME"> USER NAME </string>
+    <string name="SDOCODE"> SDO CODE </string>
+    <string name="RECONNECTION"> RECONNECTION </string>
+    <string name="NoResultsfound"> No Results found </string>
+    <string name="Search"> Search </string>
+    <string name="IPENUMERATION"> IP ENUMERATION </string>
+    <string name="SignIn"> Sign In </string>
+    <string name="Version"> Version </string>
+    <string name="bcits"> bcits </string>
+    <string name="Login"> Login </string>
+    <string name="SearchRRNumber"> Search RR Number </string>
+    <string name="AccountDetails"> Account Details </string>
+    <string name="AccountNo"> Account No </string>
+    <string name="ConsumerName"> Consumer Name </string>
+    <string name="Tariff"> Tariff </string>
+    <string name="CAPTUREIMAGE"> CAPTURE IMAGE </string>
+    <string name="CAPTURE"> CAPTURE </string>
+    <string name="CAPTUREMORE"> CAPTURE MORE </string>
+    <string name="SAVEPHOTOS"> SAVE PHOTOS </string>
+    <string name="ADDPHOTOS"> ADD PHOTOS </string>
+    <string name="AddTransformerDetails"> Add Transformer Details </string>
+    <string name="InspectionsStatus"> Inspections Status </string>
+    <string name="TotalDTC"> Total DTC </string>
+    <string name="NotSyncedtoserver"> Not Synced to server </string>
+    <string name="UploadOfflineSavedData"> Upload Offline Saved Data </string>
+    <string name="DownloadDTCMaster"> Download DTC Master </string>
+    <string name="Back"> Back </string>
+    <string name="MeterFixed"> Meter Fixed </string>
+    <string name="AccountDetailsalert"> No Village Found </string>
+    <string name="NoDTC"> No DTC Codes Found </string>
+    <string name="EnterVoltageDetails"> Enter Voltage Details </string>
+    <string name="EnterCurrentDetails"> Enter Current Details </string>
+    <string name="Load1"> Couldn\'t load photo 1 </string>
+    <string name="Load2"> Couldn\'t load photo 2 </string>
+    <string name="Load3"> Couldn\'t load photo 3 </string>
+    <string name="NoDTCFound">  No DTC Found Under this Feeder </string>
+    <string name="NoCircleFound"> No Circle Found  </string>
+    <string name="NoDivisionFound">No Division Found  </string>
+    <string name="NoSubDivisionFound">No Sub Division Found </string>
+    <string name="Nounit">No unit</string>
+    <string name="NosubstationFound">No substation Found </string>
+    <string name="NounitsubstationFound"> No unit/substation Found </string>
+    <string name="NoVillageFound"> No Village Found </string>
+    <string name="Nomoredatatoupdate"> No more data to update </string>
+    <string name="NoSDCARDFOUND"> No SD CARD FOUND</string>
+    <string name="EnterRRNumber"> Enter RR Number </string>
+    <string name="EnterUniqueCode"> Enter Valid Unique Code </string>
+    <string name="EnterSanctionedLoad"> Enter Sanctioned Load </string>
+    <string name="EnterVoltageRY"> Enter Voltage RY </string>
+    <string name="EnterVoltageYB"> Enter Voltage YB </string>
+    <string name="EnterVoltageBR"> Enter Voltage BR </string>
+    <string name="EnterCurrentR"> Enter Current R </string>
+    <string name="EnterCurrentY"> Enter Current Y </string>
+    <string name="EnterCurrentB"> Enter Current B </string>
+    <string name="EnterConnectionLoad"> Enter Connection Load </string>
+    <string name="EnterFatherHusbandName"> Enter Father/Husband Name</string>
+    <string name="EnterCustomerName">Enter Customer Name</string>
+    <string name="EnterAddress"> Enter Address </string>
+    <string name="InvalidLatitude"> Invalid Latitude </string>
+    <string name="InvalidLongitude">Invalid Longitude </string>
+    <string name="InvalidNorthingandEastingValues"> Invalid Northing and Easting Values</string>
+    <string name="SavedDetails"> Saved Details to the Phone, Please Press Upload Button </string>
+    <string name="WouldyouAddPhotos"> Would you like to Add Photos </string>
+    <string name="SavedDetailstothePhone">Saved Details to the Phone, Please Press Upload Button</string>
+    <string name="Addmore"> Add more </string>
+    <string name="YES"> YES </string>
+    <string name="Info"> Info </string>
+    <string name="OK"> OK </string>
+    <string name="NO"> NO </string>
+    <string name="EnterNumberIP"> Enter Number of IP Sets Connection </string>
+    <string name="EnterDTCNumber">Enter DTC Code / Number </string>
+    <string name="EnterNumberofIP"> Enter Number of IP Sets Connection </string>
+    <string name="Saving"> Saving </string>
+    <string name="SavedDetailspressUpload"> Saved Details, Please Press Upload Button </string>
+    <string name="AddPhoto"> Add Photo </string>
+    <string name="WouldyouliketoAddPhotos"> Would you like to Add Photos</string>
+    <string name="page"> page </string>
+    <string name="transformer"> transformer </string>
+    <string name="MOBILE"> MOBILE </string>
+    <string name="wifi"> wifi </string>
+    <string name="ContactUs"> ContactUs </string>
+    <string name="User"> User: </string>
+    <string name="Doyouwanttologout">Do you want to logout?</string>
+    <string name="Exit"> Exit </string>
+    <string name="Doyouwantexit"> Do you want to really exit ? </string>
+    <string name="Datasavingtophone"> Data saving to phone memory </string>
+    <string name="Thiswilltakeseveralminutes">This will take several minutes. Please wait </string>
+    <string name="masterdata"> masterdata </string>
+    <string name="masterpageread">  masterpage/read </string>
+    <string name="Response">  Response </string>
+    <string name="invalid">  invalid </string>
+    <string name="ServerDown">  ServerDown </string>
+    <string name="circle">  circle </string>
+    <string name="division">  division </string>
+    <string name="subDivision">  sub Division </string>
+    <string name="siteCode">  site Code </string>
+    <string name="place"> place </string>
+    <string name="hp"> hp </string>
+    <string name="kw"> kw </string>
+    <string name="noOfMeters"> noOfMeters </string>
+    <string name="SuccefullyDownloaded"> Succefully Downloaded </string>
+    <string name="serverstatus"> server/status </string>
+    <string name="success"> Success </string>
+    <string name="ServerdowntryagainLater">  Server down Please try again Later </string>
+    <string name="Internetnotavailable"> Internet is not available </string>
+    <string name="NoDetailsFound"> No Details Found. </string>
+    <string name="LoadingDetails">Loading Details </string>
+    <string name="UploadingdataPleaseWait">Uploading data. Please Wait </string>
+    <string name="nomoredatatosync">No More Data to Sync </string>
+    <string name="EnterUserName">Enter User Name </string>
+    <string name="EnterPassword">Enter Password </string>
+     <string name="password">Password </string>
+    <string name="LoggingInPleasewait">Logging In. Please wait </string>
+    <string name="InvalidCredentials">Invalid Credentials </string>
+    <string name="NetworkProblem">Network Problem </string>
+    <string name="OfflineLogin">Offline Login </string>
+    <string name="LoginfrommobileInvalidCredentials"> Login from mobile\nInvalid Credentials </string>
+    <string name="SomeproblemoccuredPleaseclosetheapp"> Some problem occured\n Please close the application and try again </string>
+    <string name="ChooseaCircle">Choose a Circle </string>
+    <string name="ChooseaDivision">Choose a Division </string>
+    <string name="ChooseaSubDivision">Choose a Sub Division </string>
+    <string name="EnterSheetNumber">Enter Sheet Number </string>
+    <string name="EnterOMUnit"> Enter OM Unit </string>
+    <string name="wait">wait </string>
+    <string name="EnterSubStation"> Enter Sub Station </string>
+    <string name="EnterFeederName"> Enter Feeder Name </string>
+    <string name="LoadingFeederDetails"> Loading Feeder Details</string>
+    <string name="LoadingAccountNumbers"> Loading Account Numbers</string>
+    <string name="Pleaseenteraccountnumber"> Please enter account number</string>
+    <string name="UnAuthorised"> UnAuthorised </string>
+    <string name="Addressnotavailable">  Address not available </string>
+    <string name="Namenotavailable">  Name not available </string>
+    <string name="LoadingDTCDetails"> Loading DTC Details </string>
+    <string name="Settings"> Settings </string>
+    <string name="ChangeImage"> Change Image </string>
+    <string name="Transformers"> Transformers </string>
+    <string name="LoadingConnectionDetails">Loading Connection Details </string>
+    <string name="OfflineDTCDataSyncedSuccessfully"> Offline DTC Data Synced Successfully </string>
+    <string name="dataSyncedSuccessfully"> Data Synced Successfully </string>
+    <string name="ServerError"> Server Error </string>
+    <string name="NoDatatoDownload"> No Data to Download </string>
+    <string name="OfflineIPDataSyncedSuccessfully">Offline IP Data Synced Successfully </string>
+    <string name="AddDTCDetails">Add DTC Details </string>
+    <string name="PleaseUploadAllDataBeforeDownloadNewData"> Please Upload All Data Before Download New Data </string>
+    <string name="enterSdoCode"> Enter SDO code </string>
+    <string name="enterMrCode"> Enter MR code </string>
+    <string name="dtcNameLocation"> DTC Name / Location </string>
+    <string name="olddtcName"> Old DTC Code(optional) </string>
+    <string name="newdtcName"> DTC Code </string>
+    <string name="make">Make</string>
+    <string name="neutral">Neutral</string>
+    <string name="frontView">Front View</string>
+    <string name="browse">Browse</string>
+    <string name="rightSide">Right View</string>
+    <string name="leftSide">Left View</string>
+    <string name="doYouWantToExitFromSurvey">Do You Want To Exit From Survey ?</string>
+    <string name="invalidMobileNumber">Invalid Mobile Number</string>
+    <string name="lastLoadedLocation">Last Loaded Location</string>
+    <string name="chooseAfeederNumber">Choose A Feeder Number</string>
+    <string name="chooseAdtc">Choose A DTC</string>
+    <string name="lastSelection">Last Selection</string>
+    <string name="CurrentLocation"> Current Location</string>
+    <string name="nolocationSaved"> No Location Saved</string>
+    <string name="mapnavigation"> Map Navigation </string>
+    <string name="Loginfrommobile"> Login from mobile </string>
+    <string name="downloadingIpDetails">Downloading IP Details</string>
+    <string name="pleaseSetValidTime"> Please set valid date and time in device .. Server time is</string>
+    <string name="applicationVersionWarnig">Sorry, Application version which your using is not allowed. Please install latest version and try again</string>
+    <string name="sorryYouAreUsignUnauthorizedDevice">Sorry You Are Using Unauthorized Device. Please Register Device And Try Again</string>
+    <string name="sorryYouAreUsingOldVersion">Sorry your using old version. Please install latest version and try again</string>
+    <string name="allPreviousDataWillBeRemoved">All Previous Data Will Be Removed</string>
+    <string name="checkingDevicestatus">Checking Device Status</string>
+    <string name="enterTaluk">Ente Taluk</string>
+    <string name="chooseACrop">Choose A Crop</string>
+    <string name="enterTrackPoint">Enter Track Point</string>
+    <string name="enteraccuracy"> Invalid Accuracy Point</string>
+    <string name="EnterDTCNameOrLocation">Enter DTC Name or Location </string>
+    <string name="notSavedDetailsTryAgain">Not Saved Details. Try Again </string>
+    <string name="sessionexpired">Session Expired Please Login Again</string>
+    <string name="update">UPDATE </string>
+	<string name="yourlocationcode"> Your SDO Code </string>
+    <string name="yourmrcode"> Your MR Code </string>
+    
+    <string name="locationcode"> SDO Code </string>
+    <string name="mrcode"> User Name </string>
+    <string name="editdtc"> Edit DTC </string>
+      <string name="editip"> Edit IP Details </string>
+    <string name="clickandedit"> Click the List to View and Edit </string>
+    
+    
+    <string-array name="loginCategory">
+        <item>SECTION</item>
+        <!-- <item>SUB-DIVISION</item>
+        <item>SECTION</item>
+        <item>DIVISION</item>
+        <item>CIRCLE</item>
+        <item>CORPORATE</item> -->
+    </string-array>
+    <string-array name="ticketstatus">
+        <item>Select Status</item>
+        <item>Registered&amp;Assigned</item>
+        <item>On Hold</item>
+        <item>Resolved</item>
+        <item>Reopened</item>
+    </string-array>
+ <string-array name="category">
+        <item>Select category</item>
+        <item>A - Application level bug fixing and troubleshooting / Database related problems</item>
+        <item>B - Procedural level changes / enhancement</item>
+        <item>C - Architectural level changes</item>
+        <item>D - Repair/replacement of all kinds of Hardware</item>
+    </string-array>
+     <string-array name="subcategorynone">
+        <item>Select category</item>
+    </string-array>
+     <string-array name="subcategoryA">
+        <item>Issues related to application crashing and hanging</item>
+        <item>Issues related to application not responding</item>
+        <item>Issues related to data inconsistency</item>
+        <item>Failure of application server</item>
+        <item>Issues related to data security</item>
+        <item>Failure of database server</item>
+        <item>Wrong data is displayed in user interfaces</item>
+        <item>Issues related to data inconsistency and wrong data in reports</item>
+        <item>Issues related to application security</item>
+        <item>Reports that govern data collection and consolidation</item>
+        <item>Issue relating to Connectivity</item>
+        <item>Interface is not working for several users</item>
+        <item>Authorization failure of users</item>
+        <item>Frequent start of application on server side</item>
+        <item>Issues related to application not working</item>
+    </string-array>
+     <string-array name="subcategoryB">
+        <item>Changes to existing reports / New Reports</item>
+        <item>New interface</item>
+        <item>New Authentication</item>
+        <item>Application performance issues</item>
+        <item>Printout not coming properly for certain report formats</item>
+        <item>Module not working as per the specified requirement of CESC</item>
+        <item>New Application patches</item>
+        <item>Changes to existing business process flows without architectural changes</item>
+    </string-array>
+     <string-array name="subcategoryC">
+        <item>New Functional requirements</item>
+        <item>Issues related to look and feel</item>
+        <item>Issues related to grammatical mistakes in user interface</item>
+        <item>Changes to existing business process flows involving architectural changes</item>
+    </string-array>
+     <string-array name="subcategoryD">
+        <item>Non/mal-functioning of hardware</item>
+    </string-array>
+    <string name="title_activity_ticketing">TicketingActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_registerticketactivity">Registerticketactivity</string>
+    
+
+</resources>

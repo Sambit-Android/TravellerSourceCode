@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+	version="1.0">
+	<persistence-unit name="pgrs" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		
+		<!-- PGRS Related Entity Classes -->
+		<class>com.pgrs.entity.Company</class>
+		<class>com.pgrs.entity.Department</class>
+		<class>com.pgrs.entity.Designation</class>
+		<class>com.pgrs.entity.EscalatedComplaintsEntity</class>
+		<class>com.pgrs.entity.HelpDeskTicketEntity</class>
+		<class>com.pgrs.entity.LocationsEntity</class>
+		<class>com.pgrs.entity.Office</class>
+		<class>com.pgrs.entity.Project</class>
+		<class>com.pgrs.entity.ProjectHeirarchyEntity</class>
+		<class>com.pgrs.entity.ProjectTreeTemplateLevels</class>
+		<class>com.pgrs.entity.Role</class>
+		<class>com.pgrs.entity.TicketCategoryEntity</class>
+		<class>com.pgrs.entity.TicketDocumentsEntity</class>
+		<class>com.pgrs.entity.TicketEscalationEntity</class>
+		<class>com.pgrs.entity.TicketSubCategoryEntity</class>
+		<class>com.pgrs.entity.TicketTransactionEntity</class>
+		<class>com.pgrs.entity.Users</class>
+		
+
+		<!--DB configuration for Oracle -->
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="none" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory" />
+			<property name="hibernate.cache.provider_configuration_file_resource_path" value="/ehcache.xml" /> 
+			<property name="hibernate.cache.use_query_cache" value="false"/>
+			<property name="hibernate.cache.use_second_level_cache" value="true"/>
+			
+			<!-- <property name="hibernate.generate_statistics" value="true" /> -->
+			<property name="hibernate.cache.use_structured_entries" value="true" />
+			<property name="hibernate.jdbc.batch_size" value="20"/>
+			
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+   			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://192.168.2.84:6412/cesc"/>
+   			<property name="javax.persistence.jdbc.user" value="postgres"/>
+  	    	<property name="javax.persistence.jdbc.password" value="post123" />			
+		</properties>	
+	</persistence-unit>
+</persistence>

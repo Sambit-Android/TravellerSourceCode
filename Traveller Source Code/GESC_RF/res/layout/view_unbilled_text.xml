@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    
+     android:padding="5dip" >
+    
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/border_light_gray_inside"
+    android:orientation="vertical" 
+   
+    >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:weightSum="1"
+                 >
+
+                <TextView
+                    android:id="@+id/id_number_unbilled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="999"
+                    android:textColor="@color/Blueee"
+                    android:textSize="13sp"
+                    android:layout_weight=".05" />
+
+                
+
+                <TextView
+                    android:id="@+id/txt_acc_no_unbilled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="123ABCerter"
+                    android:textColor="@color/DarkRed"
+                    android:typeface="serif" 
+                    android:textSize="14sp"
+                    android:layout_weight=".20"/>
+                <TextView
+                     android:id="@+id/txt_tariff_desc_label_unbilled"
+                    android:layout_weight=".14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tariff"
+                    android:textColor="@color/Black"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+                
+
+                <TextView
+                    android:id="@+id/txt_tariff_desc_unbilled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_weight=".20"
+                    android:text="2135"
+                    android:textColor="@color/DarkGreen"
+                    android:typeface="serif"
+                    android:textSize="14sp" />
+
+                
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearOffline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="visible" 
+                   android:weightSum="1"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:gravity="left"
+                    android:text="Name: "
+                    android:textColor="@color/Black"
+                    
+                    android:textStyle="italic"
+                    android:typeface="serif" 
+                    android:textSize="13sp"
+                    android:layout_weight=".05"
+                    />
+
+                <TextView
+                     android:id="@+id/txt_name_unbilled_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="01-11-2014"
+                    android:textColor="@color/DarkGreen"
+                    android:typeface="serif" />
+
+                
+
+                
+     
+            </LinearLayout>
+
+          
+        </LinearLayout>
+
+
+       
+    </LinearLayout>
+</LinearLayout>

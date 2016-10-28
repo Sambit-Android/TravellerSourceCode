@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+  xmlns:beans="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+		
+	<http pattern="/resources/**" security="none"/> 
+	<http pattern="/recoverPassword/**" security="none"/>
+	<http pattern="/forgotPassword/**" security="none"/>
+	<http pattern="/custumerLoginPage/**" security="none"/>
+	<http pattern="/registration/**" security="none"/>
+	
+	<http auto-config="true" disable-url-rewriting="true" access-decision-manager-ref="accessDecisionManager">	
+		
+		<intercept-url pattern="/index" access="ROLE_ADMINISTRATOR"></intercept-url>
+		
+		<intercept-url pattern="/users" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/userManagement/users/createButton" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/userManagement/users/updateButton" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/userManagement/users/statusButton" access="ROLE_ADMINISTRATOR"></intercept-url> 		 
+		
+		<intercept-url pattern="/roles" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/userManagement/roles/createButton" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/userManagement/roles/updateButton" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/userManagement/roles/statusButton" access="ROLE_ADMINISTRATOR"></intercept-url>
+		
+		<intercept-url pattern="/productaccess" access="ROLE_ADMINISTRATOR"/>
+		<intercept-url pattern="/users/pam/assign" access="ROLE_ADMINISTRATOR"></intercept-url>	
+		<intercept-url pattern="/users/pam/commit" access="ROLE_ADMINISTRATOR"></intercept-url>			
+		
+		<intercept-url pattern="/projectaccess" access="ROLE_ADMINISTRATOR"/>
+		<intercept-url pattern="/users/prm/commit" access="ROLE_ADMINISTRATOR"></intercept-url>	
+		
+		<intercept-url pattern="/department" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/userManagement/department/createButton" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/userManagement/department/updateButton" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/userManagement/department/statusButton" access="ROLE_ADMINISTRATOR"></intercept-url>		
+	
+		<intercept-url pattern="/designation" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/userManagement/designation/createButton" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/userManagement/designation/statusButton" access="ROLE_ADMINISTRATOR"></intercept-url>		  
+		
+		<intercept-url pattern="/master/project/create" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/master/project/update" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/master/project/delete" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/master/project/approve" access="ROLE_ADMINISTRATOR"></intercept-url>		
+		
+		<intercept-url pattern="/master/company/create" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/master/company/update" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/master/company/delete" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/master/company/approve" access="ROLE_ADMINISTRATOR"></intercept-url>		
+		
+		<intercept-url pattern="/master/office/create" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/master/office/update" access="ROLE_ADMINISTRATOR"></intercept-url>
+		<intercept-url pattern="/master/office/delete" access="ROLE_ADMINISTRATOR"></intercept-url>	
+		 
+		<logout logout-success-url="/logout" invalidate-session="true" delete-cookies="JSESSIONID" />
+		
+		<form-login  login-page="/login"  default-target-url="/index"  authentication-failure-url="/login" />	
+		
+		<session-management invalid-session-url="/login" >
+    		<concurrency-control expired-url="/login"  max-sessions="1" />
+		</session-management>		
+		
+	</http>	 
+	
+	<authentication-manager>
+		<ldap-authentication-provider 
+			user-search-filter="(cn={0})" user-search-base="ou=Users"
+			group-search-filter="(uniqueMember={0})" group-search-base="ou=Roles"
+			group-role-attribute="cn" role-prefix="ROLE_">
+		</ldap-authentication-provider>
+	</authentication-manager>	
+	
+	<beans:bean id="accessDecisionManager" class="com.pgrs.ldap.CustomAccessDecisionManager">
+    	<beans:property name="allowIfAllAbstainDecisions" value="false"/>
+    		<beans:property name="decisionVoters">
+    			<beans:list>
+    			    <beans:bean class="org.springframework.security.access.vote.RoleVoter"/>
+    			</beans:list>
+    		</beans:property>
+	</beans:bean>
+
+</beans:beans> 

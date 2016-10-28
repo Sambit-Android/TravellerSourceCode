@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/btn_print_report"
+            style="@style/btn_stand_for_homepage"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_margin="5dip"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                style="@style/textShadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:gravity="left"
+                android:text="@string/print"
+                android:textColor="@color/DarkGray"
+                android:textSize="22sp" />
+
+            <ImageButton
+                android:id="@+id/previousbill_dwn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/report_view" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_report__view_heading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/blue_rem"
+            android:gravity="center"
+            android:text="@string/report"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dip"
+            android:background="@drawable/border_light_gray_inside" >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:gravity="center|left" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:text="@string/mrname"
+                    android:textColor="@color/blue_rem"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/rep_view_mrname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="left|center"
+                    android:text="@string/initialvalue"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+            </TableRow>
+
+            <TableRow
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:gravity="center|left" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:text="@string/device_id"
+                    android:textColor="@color/blue_rem"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollView2"
+                    android:layout_width="175dip"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" >
+
+                    <TextView
+                        android:id="@+id/rep_view_device_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="left|center"
+                        android:text="@string/initialvalue"
+                        android:textColor="@color/Black"
+                        android:textSize="16sp"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+                </HorizontalScrollView>
+            </TableRow>
+
+            <TableRow
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:gravity="center|left" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:text="@string/tot_no_cons"
+                    android:textColor="@color/blue_rem"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/rep_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="left|center"
+                    android:text="@string/initialvalue"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+            </TableRow>
+
+            <TableRow
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:gravity="center|left" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:text="@string/billed"
+                    android:textColor="@color/blue_rem"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/rep_billed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="left|center"
+                    android:text="@string/initialvalue"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+            </TableRow>
+
+            <TableRow
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:gravity="center|left" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:text="@string/unbilled"
+                    android:textColor="@color/blue_rem"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/rep_unbilled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="left|center"
+                    android:text="@string/initialvalue"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rep_table_row_tot_units"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:text="@string/tot_units"
+                    android:textColor="@color/blue_rem"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/rep_tot_units"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="left|center"
+                    android:text="@string/initialvalue"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rep_table_row_tot_revenue"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:text="@string/tot_revenue"
+                    android:textColor="@color/blue_rem"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/rep_tot_revenue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="left|center"
+                    android:text="@string/initialvalue"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="8dip"
+                android:background="@color/LightGrey" />
+        </TableLayout>
+
+        <ListView
+            android:id="@+id/rep_view_listView_new"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dip"
+            android:layout_marginTop="6dip"
+            android:dividerHeight="4sp" >
+        </ListView>
+    </LinearLayout>
+
+</ScrollView>

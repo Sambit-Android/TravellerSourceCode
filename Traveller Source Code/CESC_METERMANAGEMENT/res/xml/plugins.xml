@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Preference
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <plugin name="Storage" value="org.apache.cordova.Storage" />
+  <plugin name="File" value="org.apache.cordova.FileUtils" />
+<plugin name="FileTransfer" value="org.apache.cordova.FileTransfer" />
+<plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
+<plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+  
+</Preference>

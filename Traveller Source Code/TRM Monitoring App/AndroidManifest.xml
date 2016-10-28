@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bcits.cecsmrfinder"
+    android:versionCode="5"
+    android:versionName="1.5" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SEND_SMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- External storage for caching. -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- My Location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Maps API needs OpenGL ES 2.0. -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <permission
+        android:name="net.learn2develop.googlemaps.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+    <!-- End of copy. -->
+    <application
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:screenOrientation="portrait"
+        android:theme="@style/JVNNL" >
+
+        <!--
+         ** You need to replace the key below with your own key. **
+         The example key below will not be accepted because it is not linked to the
+         certificate which you will use to sign this application.
+         See: https://developers.google.com/maps/documentation/android/start
+         for instructions on how to get your own key.
+        -->
+
+        <activity
+            android:name="com.bcits.cecsmrfinder.Login"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bcits.cecsmrfinder.MarkerDemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bcits.cecsmrfinder.EditSavedTranasformer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bcits.cecsmrfinder.TakePhoto"
+            android:largeHeap="true"
+            android:screenOrientation="portrait" />
+        <activity android:name="Add_IP" >
+        </activity>
+        <activity
+            android:name="Add_transformer"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="ContactUs"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="RRnoMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="DetailedViewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="MrSummaryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="DetailedMRCardActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="ArrearsRangeGridActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="RrnumberListCustomDesignActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="DetailedMRReportGrid"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="Dashboard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="IPSET_Inspection"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="MapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="MapSurveyArreas"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="MapSurveyPerformance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="BillingProgress"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="MapSurvey"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="MainSheet"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="MainSheet_ip"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="Transformer_Inspection"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="MasterView"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="MasterListView"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="MasterListViewDTC"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="NewDtc"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="Settings"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="MasterFeeder"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="UnderConstruction"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="MapView"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="ConsumerHistorySearch"
+            android:screenOrientation="portrait" >
+        </activity>
+<activity
+            android:name="ConsumerHistoryAllDetails"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="DetailedViewActivityBilling"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="DetailedViewActivityPayment"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="DetailedViewActivityDeposit"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="DeviceStatusSearch"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="DetailedViewActivityMeter"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="DetailedViewActivityMeterChange"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="DeviceStatusAllDetails"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="ConsumerHistoryMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="ArrearsRRnoListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="ArrearsRRnoMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDFsv7MwN3q9GNl-kasQWAWqLtgAi1aaF4"
+             />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name="com.auto.update.AndroidautoUpdateActivity" >
+        </activity>
+        <activity android:name="com.auto.update.InstallApk" >
+        </activity>
+
+        <service android:name="com.bcits.utils.BackgroundSyncServie" >
+        </service>
+        
+        <activity android:name=".TicketingActivity" android:label="@string/title_activity_ticketing" android:windowSoftInputMode="stateHidden"> </activity>
+
+<activity android:name=".Registerticketactivity" android:label="@string/title_activity_registerticketactivity"> </activity>
+    </application>
+
+</manifest>

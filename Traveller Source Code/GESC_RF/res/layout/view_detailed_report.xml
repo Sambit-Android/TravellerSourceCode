@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/border_light_gray_inside"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:weightSum="1"
+                 >
+
+                <TextView
+                    android:id="@+id/id_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="999"
+                    android:textColor="@color/Blueee"
+                    android:textSize="12sp"
+                    android:layout_weight=".10" />
+
+                <TextView
+                     android:id="@+id/txt_tariff_desc_lable"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tariff"
+                    android:textColor="@color/Black"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/txt_tariff_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="123ABCerter"
+                    android:textColor="@color/DarkGreen"
+                    android:typeface="serif" 
+                    android:layout_weight=".20"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="NoOf Conn:"
+                    android:textColor="@color/Black"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:typeface="serif"
+                    android:layout_weight=".15"
+                     />
+
+                <TextView
+                    android:id="@+id/txt_no_of_conn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_weight=".20"
+                    android:text="2135"
+                    android:textColor="@color/DarkGreen"
+                    android:typeface="serif" />
+
+                
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearOffline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:text="Date"
+                    android:textColor="@color/Black"
+                    android:textSize="11sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="01-11-2014"
+                    android:textColor="@color/DarkRed"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Issue"
+                    android:textColor="@color/Black"
+                    android:textSize="11sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/column_accountnovigi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Voltage"
+                    android:textColor="@color/DarkGoldenrod"
+                    android:typeface="serif" />
+     
+            </LinearLayout>
+
+           <!--  <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Registered Id"
+                    android:textColor="@color/Black"
+                    android:textSize="11sp"
+                    android:textStyle="italic"
+                    android:typeface="serif"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/txtRegisterdId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/WhiteGhost"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="123654"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    android:visibility="invisible" />
+            </LinearLayout> -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_gravity="center_vertical"
+                android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:weightSum="1"
+             >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                
+                android:text=" NRM\n MNR\n DIS\n MB\n NV"
+                android:textColor="@color/Black"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:typeface="serif"
+                 android:layout_weight=".25"
+                 />
+
+            <TextView
+                android:id="@+id/txt_count_column1"
+                android:layout_width="74dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="Voltage is very less after 6 0 "
+                android:textColor="@color/Black"
+                android:textSize="15sp"
+                android:typeface="serif" 
+                android:layout_weight=".25"
+                />
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|top"
+                android:layout_marginLeft="6dip" 
+                android:text=" DL \n DC \n IDLE\n MS \n"
+                android:textColor="@color/Black"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:typeface="serif" 
+                android:layout_weight=".25"
+                />
+             <TextView
+                android:id="@+id/txt_count_column2"
+                android:layout_width="74dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+               
+                android:gravity="left"
+                android:text="Voltage is very less after 6 0 clock "
+                android:textColor="@color/Black"
+                android:textSize="15sp"
+                android:typeface="serif"
+                android:layout_weight=".25"
+                 />
+        </LinearLayout>
+<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:weightSum="1"
+                 >
+
+                <TextView
+                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Units"
+                    android:textColor="@color/Black"
+                    android:textSize="12sp"
+                    android:layout_weight=".10" />
+
+                <TextView
+                    android:id="@+id/txt_units"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                   android:textColor="@color/DarkGreen"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+
+                <TextView
+                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Revenue:"
+                    android:textColor="@color/Black"
+                    android:typeface="serif" 
+                    android:layout_weight=".20"/>
+                
+                <TextView
+                    android:id="@+id/txt_revenue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="123ABCerter"
+                    android:textColor="@color/DarkGreen"
+                    android:typeface="serif" 
+                    android:layout_weight=".20"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Billed Conn:"
+                    android:textColor="@color/Black"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:typeface="serif"
+                    android:layout_weight=".15"
+                     />
+
+                <TextView
+                    android:id="@+id/txt_no_of_billed_conn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_weight=".20"
+                    android:text="2135"
+                    android:textColor="@color/DarkGreen"
+                    android:typeface="serif" />
+
+                
+
+            </LinearLayout>
+        <!-- <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:text="Address"
+                android:textColor="@color/Black"
+                android:textSize="11sp"
+                android:textStyle="italic"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/column_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Mysore Road Karnataka India"
+                android:textColor="@color/DarkGray"
+                android:textSize="12sp"
+                android:typeface="serif" />
+
+            
+        </LinearLayout> -->
+    </LinearLayout>
+</LinearLayout>

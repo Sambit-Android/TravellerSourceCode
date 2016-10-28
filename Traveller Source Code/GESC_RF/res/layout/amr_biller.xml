@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/edMeterNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Meter No"
+            android:inputType="textCapCharacters"
+            android:maxLength="8"
+            android:singleLine="true"
+            android:text="C1032937" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/edPresentReading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="@string/inputpatterfornumeric"
+            android:hint="Present Rdg"
+            android:inputType="number"
+            android:maxLength="6"
+            android:singleLine="true" >
+        </EditText>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickGenerateBill"
+            android:text="Button" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="RF GROUP BILLING"
+        android:textColor="@color/androidBlue3"
+        android:textSize="23sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

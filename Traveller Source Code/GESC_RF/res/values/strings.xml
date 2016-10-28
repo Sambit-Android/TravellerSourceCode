@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="Red">#FF0000</string>
+    <string name="Green">#009900</string>
+    <string name="app_name">GESC RF</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="login">Login</string>
+    <string name="pw">Password</string>
+    <string name="mrname">MR Code</string>
+    <string name="section">Site Code  </string>
+    <string name="dashboard">DashBoard</string>
+    <string name="consu_details">Consumer Details</string>
+    <string name="total">Total:</string>
+    <string name="billed">Billed:</string>
+    <string name="unbilled">UnBilled</string>
+    <string name="sync">Synched</string>
+    <string name="notsync">Not Sync</string>
+    <string name="goforbilling">Billing</string>
+    <string name="generate">Print Bill</string>
+    <string name="prev">&lt;&lt;</string>
+    <string name="ntxfetch">>></string>
+    <string name="totalspace">Total Space in SD card</string>
+    <string name="availablespace">Available Space in SD card</string>
+    <string name="PreviousMeterStatus">Previous Meter Status</string>
+    <string name="presentstatus">Present Meter Status</string>
+    <string name="previousreading">Previous Reading :</string>
+    <string name="presentreading">Present Reading :</string>
+    <string name="appVersion">GESCOM</string>
+    <string name="inputpatternforalpha">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</string>
+    <string name="inputpatterforalphanumeric">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789</string>
+    <string name="inputpatterfornumeric">0123456789</string>
+    <string name="inputpatterfornumeric_for_pf_bmd">.0123456789</string>
+    <string name="hintconsumerno">Enter Consumer No</string>
+    <string name="invalidmtrstatus">Not valid status</string>
+    <string name="Printbill">Print bill</string>
+    <string name="print">Print </string>
+    <string name="title_not_connected">not connected</string>
+    <string name="not_connected">You are not connected to a device</string>
+    <string name="title_connected_to">connected: </string>
+    <string name="title_connecting">connecting...</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_found">No devices found</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Bluetooth Chat.</string>
+    <string name="connect">Connect a device</string>
+    <string name="discoverable">Make discoverable</string>
+    <string name="cus_title_name">GESCOM Ver-M</string>
+    <string name="btn_nxt">Next</string>
+    <string name="bill_details">Bill Details</string>
+    <string name="trivector_meter">Trivector Meter Reading</string>
+    <string name="consuname">Name</string>
+    <string name="tariff">Tariff</string>
+    <string name="rrno">RR No</string>
+    <string name="address">Address</string>
+    <string name="sumreport">Summary Report</string>
+    <string name="detailedsumreport">Detailed Summary Report</string>
+    <string name="report">Reports</string>
+    <string name="route_wise">Reading date wise</string>
+    <string name="unbilled_report">Un-Billed Report</string>
+    <string name="view">View</string>
+    <string name="tot_no_cons">Total Cons</string>
+    <string name="mstatus_lab">M Status</string>
+    <string name="count_lab">Count</string>
+    <string name="initialvalue">-</string>
+    <string name="device_id">Device ID</string>
+    <string name="tot_units">TotUnits</string>
+    <string name="tot_revenue">TotRevenue</string>
+    <string name="devicemanager">Device Manager</string>
+    <string name="enablephoto">Enable PhotoBilling</string>
+    <string name="enablegps">Enable GPS Capture</string>
+    <string name="go_to">Start</string>
+    <string name="pf_reading">PF Rndg</string>
+    <!-- <string name="pf_reading_hint">Hint: 0 – 0.999</string> -->
+    <string name="pf_reading_hint">Hint: 0 to 0.999</string>
+    <string name="bmd_reading">BMD Rndg</string>
+    <string name="ckwh">CKWH/LKWH</string>
+    <string name="bmd_reading_hint">Hint: 0 to 9.9999</string>
+    <string name="ckwh_hint">Hint: 0 to 9999</string>
+    <string name="versName">Version</string>
+
+    <!--
+Following are the status
+  .........................................
+
+
+// 1 - NORMAL
+// 2 - Door Lock  - 
+// 3 - MNR
+// 4 - Direct Connection
+// 5 - Diss Connection
+// 6 - IDLE
+// 7 - MB- MeterSeal Broken
+// 8 - MS - 
+// 9 - NV -Not Visible
+    -->
+
+
+    <!-- PREVIOUS METER STATUS LIST -->
+    <string name="a">NORMAL</string>
+    <string name="b">DL</string>
+    <string name="c">MNR</string>
+    <string name="d">DC</string>
+    <string name="e">DISSCONN</string>
+    <string name="f">IDLE</string>
+    <string name="g">MB</string>
+    <string name="h">MS</string>
+    <string name="i">NV</string>
+
+    <!-- END PREVIOUS METER STATUS LIST -->
+
+
+    <!-- PRESENT METER STATUS LIST -->
+    <string-array name="meter_status">
+        <item>NORMAL</item>
+        <item>DL</item>
+        <item>MNR</item>
+        <item>DC</item>
+        <item>DISSCONN</item>
+        <item>IDLE</item>
+        <item>MB</item>
+        <item>MS</item>
+        <item>NV</item>
+    </string-array>
+    <string-array name="meter_status_unmeterd">
+        <item>DC</item>
+    </string-array>
+    <string-array name="meter_status_lt1lt2fllt3ol">
+        <item>NORMAL</item>
+        <item>MNR</item>
+        <item>DC</item>
+        <item>DISSCONN</item>
+        <item>IDLE</item>
+        <item>MB</item>
+        <item>MS</item>
+        <item>NV</item>
+    </string-array>
+
+    <!-- END PRESENT METER STATUS LIST -->
+
+</resources>

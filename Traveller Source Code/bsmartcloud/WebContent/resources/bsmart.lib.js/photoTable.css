@@ -1,0 +1,59 @@
+#divTable 
+{
+    display: inline-block;
+}
+
+#billTable 
+{
+	display:inline-block;
+	border-collapse: separate;
+	border-spacing: 0px;
+	border-color: gray; 
+	background: #e1e9e1;
+	margin-left: 50px;
+	margin-bottom: 20px;
+	font-size: 12px;
+}
+
+#deviceButton
+{
+	margin-bottom: 10px;
+	display:inline-block; 
+}
+#btnId
+{
+   background-color: #AAD4FF;
+   font-size: 14px;
+}
+
+#image
+{
+
+   width: 1000px;
+   height: 1000px;
+}
+ #image1
+{
+    border-radius: 20px;
+}
+ #Imageview
+{
+overflow-x: auto;
+    margin-bottom: 5px;
+} 
+#rr1
+{
+   width: 50px;
+   height: 50px;
+     
+}
+#rl2
+{
+   width: 50px;
+   height: 50px;
+    margin-left: 350px; 
+}
+#rll
+{
+    margin-left: 390px;
+}

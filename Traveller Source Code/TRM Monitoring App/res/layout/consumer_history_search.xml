@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/radiogrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:background="@color/detailed_mr_card_header"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            android:text="RR No" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:textColor="@color/White"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Name" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            android:text="Village" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:padding="2dp"
+        android:background="@color/detailed_mr_card_header"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/White"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:hint="Search Consumer History"
+            android:inputType="text|textNoSuggestions"
+            android:maxLength="20"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/Black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+
+       <!--  <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-41dp"
+            android:padding="10dp"
+            android:src="@drawable/searchico" /> -->
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnsearch"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="0dp"
+        android:background="@drawable/button_main"
+        android:gravity="center"
+        android:text="Search"
+        android:textColor="@color/White"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        android:typeface="sans" />
+
+    <ListView
+              android:id="@+id/list"
+              android:visibility="invisible"
+              android:layout_height="wrap_content"
+              android:textColor="#000"
+              android:layout_width="match_parent"
+              android:divider="#34495E"
+              android:padding="2dp"
+              android:background="@color/detailed_mr_card_header"
+    		android:dividerHeight="1px">
+         </ListView>
+
+</LinearLayout>

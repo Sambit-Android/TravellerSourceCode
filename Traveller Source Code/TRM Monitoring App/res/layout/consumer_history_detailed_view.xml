@@ -1,0 +1,1357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/boundary_chart2"
+            android:orientation="vertical"
+            android:padding="2dp" >
+
+              <TableRow
+                android:id="@+id/fsjijhsuioja667"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_header_heading"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1.5"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:text="Consumer Details"
+                    android:textStyle="bold"
+                    android:id="@+id/consumerdetailstitle"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                
+            </TableRow>
+            
+            <TableRow
+                android:id="@+id/fsjijhsuioja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_light"
+                android:weightSum="2"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:text="Consumer Name"
+                    android:textStyle="bold"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </TableRow>
+            
+            <TableRow
+                android:id="@+id/fsjijhsuioj222"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_dark"
+                android:weightSum="2"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Address1"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" 
+                    />
+
+                <TextView
+                    android:id="@+id/info1"
+                    android:layout_width="0dp"
+                    android:autoLink="phone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </TableRow>
+            
+
+            <TableRow
+                android:id="@+id/fsjijhsuioj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_light"
+                android:weightSum="2"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Address2"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/info2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                   
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </TableRow>
+
+            
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Place"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/info3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" 
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_light" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="LC Folio"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   
+                    android:id="@+id/info4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="FC"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   
+                    android:id="@+id/info5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_light" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Meter Constant"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   
+                    android:id="@+id/info6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Corporation"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   
+                    android:id="@+id/info7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_light" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Area Name"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   
+                    android:id="@+id/info8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            
+           
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="SO Code"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   
+                    android:id="@+id/info9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_light"
+                android:weightSum="2"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:text="Feeder Code"
+                    android:textStyle="bold"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/info10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </TableRow>
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_dark"
+                android:weightSum="2"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="TC Code"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" 
+                    />
+
+                <TextView
+                    android:id="@+id/info11"
+                    android:layout_width="0dp"
+                    android:autoLink="phone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </TableRow>
+            
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_light"
+                android:weightSum="2"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Pole No"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                   android:id="@+id/info12"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </TableRow>
+
+            
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="MR Code"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/info13"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" 
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_light" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="TOD"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="LD Date"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_light" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Ward"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info16"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="BKWH"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info17"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_light" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Tariff DCB"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            
+           
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Tariff Code"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info19"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_light"
+                android:weightSum="2"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:text="Date Of Service"
+                    android:textStyle="bold"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:id="@+id/info20"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </TableRow>
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_dark"
+                android:weightSum="2"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Sanction KW"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" 
+                    />
+
+                <TextView
+                    android:id="@+id/info21"
+                    android:layout_width="0dp"
+                    android:autoLink="phone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </TableRow>
+            
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_light"
+                android:weightSum="2"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Sanction HP"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/info22"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                   
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </TableRow>
+
+            
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Contract DMD"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/info23"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" 
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_light" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="PD Date"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info24"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Taluk"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info25"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_light" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="No Of Flats"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info26"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Inst Status"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info27"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_light" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Status Date"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info28"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            
+           
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Average"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info29"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_light" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Reading Day"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Side Rrno"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info31"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_light" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="PF"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info32"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Telephone"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info33"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_light" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="No Of Meters"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info34"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Termination Date"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info35"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_light" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Dispute Amount"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info36"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="A Form Date"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info37"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_light" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="B Form Date"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info38"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="C Form Date"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info39"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_light" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Trivector Meter"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   android:id="@+id/info40"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+        </LinearLayout>
+    
+
+</ScrollView>

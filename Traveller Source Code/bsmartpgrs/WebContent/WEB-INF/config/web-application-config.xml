@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:ehcache="http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring		
+		http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring/ehcache-spring-1.1.xsd
+		http://www.springframework.org/schema/task 
+		http://www.springframework.org/schema/task/spring-task-4.1.xsd">
+
+<task:scheduler id="taskScheduler" pool-size="25"/>
+<task:executor id="taskExecutor" pool-size="25"/>
+<task:annotation-driven executor="taskExecutor"	scheduler="taskScheduler" />
+
+<!--EhCache configuration starts  -->					
+					
+<bean id="ldapbussinessmodel" class="com.pgrs.ldap.LdapBusinessModel"  /> 
+<ehcache:annotation-driven cache-manager="ehCacheManager" />
+
+<bean id="ehCacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+	<property name="configLocation">
+		<value>/WEB-INF/config/ehcache.xml</value> 
+	</property> 
+</bean>
+
+<bean id="ehCacheFactory" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+	<property name="cacheManager">
+		<ref bean="ehCacheManager" />
+	</property>
+	<property name="bootstrapCacheLoader">
+		<ref bean="myBootstrapCacheLoaderFactory" />
+	</property>
+</bean>
+
+<bean id="myBootstrapCacheLoaderFactory" class="com.pgrs.util.MyBootstrapCacheLoaderFactory">
+	<property name="cacheManager">
+		<ref bean="ehCacheManager" />
+	</property>
+	<property name="ldapbussinessmodel">
+		<ref bean="ldapbussinessmodel" />
+	</property>
+</bean>
+
+	<!--EhCache configuration End  -->
+
+<mvc:annotation-driven />
+<mvc:default-servlet-handler />
+
+	<!-- Bootstraps JSR-303 validation and exposes it through Spring's Validator 
+		interface -->
+<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+	<property name="messageInterpolator">
+      	<bean class="com.pgrs.util.CustomSpringMessageSourceInterpolator" />
+    </property>
+</bean>	
+	
+	<!--Configuration for cache control -->
+<mvc:interceptors>
+  <mvc:interceptor>
+   <mvc:mapping path="WebContent/resources/kendo/*.js"/>
+    <bean id="webContentInterceptor" class="org.springframework.web.servlet.mvc.WebContentInterceptor">
+        <property name="cacheSeconds" value="0"/>
+        <property name="useExpiresHeader" value="true"/>
+        <property name="useCacheControlHeader" value="true"/>
+        <property name="useCacheControlNoStore" value="true"/>
+    </bean>
+   </mvc:interceptor>
+</mvc:interceptors>	
+	
+	<!-- Scans the classpath for annotated components that will be auto-registered 
+		as Spring beans. For example @Controller and @Service. Make sure to set the 
+		correct base-package -->
+<context:component-scan base-package="com.pgrs" />
+	 
+	<!--Configuration to load Property file from Jboss home -->
+	<!-- <context:property-placeholder location="file:#{systemProperties['jboss.home.dir']}/standalone/configuration/configuration.properties"/> -->
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+	<property name="prefix" value="/WEB-INF/jsps/"/>
+	<property name="suffix" value=".jsp"/>
+</bean>
+	
+<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+    <property name="basenames" value="properties/messages,properties/messages1" />
+    <property name="defaultEncoding" value="ISO-8859-2"/>
+</bean>
+
+<mvc:interceptors>
+    <bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+      <property name="paramName" value="lang" />
+    </bean>
+</mvc:interceptors>
+
+<bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+    <property name="defaultLocale" value="en"/>
+</bean>
+	
+<mvc:resources mapping="/resources/**" location="/resources/" cache-period="36000" />
+	 
+<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+	
+	<!-- Load Hibernate related configuration -->
+<import resource="data-access-config.xml" />
+	
+
+</beans>

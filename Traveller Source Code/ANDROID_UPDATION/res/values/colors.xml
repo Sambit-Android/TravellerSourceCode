@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="White">#FFFFFF</color>
+    <color name="DarkGreen">#006400</color>
+ <!--  Indigo THEME -->
+  
+    <color name="dashboard_header_footer">   #3f51b5 </color>
+    <color name="detailed_mr_card_header_heading"> #7986cb</color>
+    <color name="detailed_mr_card_header_subheading"> #9fa8da </color>
+    <color name="detailed_mr_card_row_dark">  #c5cae9 </color>
+    <color name="detailed_mr_card_row_light"> #e8eaf6 </color>
+    <color name="detailed_mr_card_header">  #3f51b5  </color> <!-- dashboard_header_footer -->
+    <color name="mr_grid_background">#9fa8da</color> <!-- detailed_mr_card_header_subheading -->
+    <color name="dashboard_inner_color"> #7986cb </color>  <!-- detailed_mr_card_header_heading -->
+    <color name="login_button_color">#3f51b5</color>  <!-- dashboard_header_footer -->
+    
+</resources>

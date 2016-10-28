@@ -1,0 +1,114 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (classFileParser.cpp:3470), pid=7284, tid=1892
+#  Error: ShouldNotReachHere()
+#
+# JRE version: 7.0-b147
+# Java VM: Java HotSpot(TM) Client VM (21.0-b17 mixed mode windows-x86 )
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00a29c00):  JavaThread "Unknown thread" [_thread_in_vm, id=1892, stack(0x009b0000,0x00a00000)]
+
+Stack: [0x009b0000,0x00a00000],  sp=0x009ff120,  free space=316k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1630e1]
+V  [jvm.dll+0x15dcfb]
+V  [jvm.dll+0x18e37]
+V  [jvm.dll+0x1a6a8]
+V  [jvm.dll+0x2a42f]
+V  [jvm.dll+0x2b818]
+V  [jvm.dll+0x2bedb]
+V  [jvm.dll+0x2bf2a]
+V  [jvm.dll+0x2c07d]
+V  [jvm.dll+0x2c15a]
+V  [jvm.dll+0x2c3d7]
+V  [jvm.dll+0x73cb1]
+V  [jvm.dll+0x7406b]
+V  [jvm.dll+0x121a7c]
+V  [jvm.dll+0x14382a]
+V  [jvm.dll+0xa2940]
+C  [javaw.exe+0x1359]
+C  [javaw.exe+0x1dc9]
+C  [javaw.exe+0xa0cb]
+C  [javaw.exe+0xa155]
+C  [kernel32.dll+0x1336a]  BaseThreadInitThunk+0x12
+C  [ntdll.dll+0x39f72]  RtlInitializeExceptionChain+0x63
+C  [ntdll.dll+0x39f45]  RtlInitializeExceptionChain+0x36
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00a29c00 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=1892, stack(0x009b0000,0x00a00000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Dynamic libraries:
+0x010c0000 - 0x010ef000 	C:\Program Files (x86)\Java\jdk1.7.0\bin\javaw.exe
+0x77dd0000 - 0x77f50000 	C:\Windows\SysWOW64\ntdll.dll
+0x75850000 - 0x75960000 	C:\Windows\syswow64\kernel32.dll
+0x771a0000 - 0x771e7000 	C:\Windows\syswow64\KERNELBASE.dll
+0x75970000 - 0x75a10000 	C:\Windows\syswow64\ADVAPI32.dll
+0x775f0000 - 0x7769c000 	C:\Windows\syswow64\msvcrt.dll
+0x75c10000 - 0x75c29000 	C:\Windows\SysWOW64\sechost.dll
+0x75dc0000 - 0x75eb0000 	C:\Windows\syswow64\RPCRT4.dll
+0x757f0000 - 0x75850000 	C:\Windows\syswow64\SspiCli.dll
+0x757e0000 - 0x757ec000 	C:\Windows\syswow64\CRYPTBASE.dll
+0x760d0000 - 0x761d0000 	C:\Windows\syswow64\USER32.dll
+0x771f0000 - 0x77280000 	C:\Windows\syswow64\GDI32.dll
+0x75d20000 - 0x75d2a000 	C:\Windows\syswow64\LPK.dll
+0x776b0000 - 0x7774d000 	C:\Windows\syswow64\USP10.dll
+0x70c00000 - 0x70d9e000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_41e6975e2bd6f2b2\COMCTL32.dll
+0x77550000 - 0x775a7000 	C:\Windows\syswow64\SHLWAPI.dll
+0x75f10000 - 0x75f70000 	C:\Windows\system32\IMM32.DLL
+0x75c30000 - 0x75cfc000 	C:\Windows\syswow64\MSCTF.dll
+0x65250000 - 0x6530e000 	C:\Program Files (x86)\Java\jdk1.7.0\jre\bin\msvcr100.dll
+0x67660000 - 0x67981000 	C:\Program Files (x86)\Java\jdk1.7.0\jre\bin\client\jvm.dll
+0x751d0000 - 0x751d7000 	C:\Windows\system32\WSOCK32.dll
+0x76260000 - 0x76295000 	C:\Windows\syswow64\WS2_32.dll
+0x76510000 - 0x76516000 	C:\Windows\syswow64\NSI.dll
+0x70f00000 - 0x70f32000 	C:\Windows\system32\WINMM.dll
+0x76520000 - 0x76525000 	C:\Windows\syswow64\PSAPI.DLL
+0x6a740000 - 0x6a74c000 	C:\Program Files (x86)\Java\jdk1.7.0\jre\bin\verify.dll
+0x6a720000 - 0x6a740000 	C:\Program Files (x86)\Java\jdk1.7.0\jre\bin\java.dll
+0x6a700000 - 0x6a713000 	C:\Program Files (x86)\Java\jdk1.7.0\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=Cp1252 -Xbootclasspath:F:\SDK Luna\platforms\android-22\android.jar;F:\SDK Luna\add-ons\addon-google_apis-google-22\libs\effects.jar;F:\SDK Luna\add-ons\addon-google_apis-google-22\libs\usb.jar;F:\SDK Luna\add-ons\addon-google_apis-google-22\libs\maps.jar 
+java_command: Test
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jre7JAVA_HOME\bin
+PATH=C:/Program Files (x86)/Java/jdk1.7.0/bin/../jre/bin/client;C:/Program Files (x86)/Java/jdk1.7.0/bin/../jre/bin;C:/Program Files (x86)/Java/jdk1.7.0/bin/../jre/lib/i386;C:\Program Files (x86)\Java\jdk1.7.0\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\TortoiseSVN\bin;;C:\Program Files\Java\jre7;F:\eclipse;
+USERNAME=user44
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 4 (4 cores per cpu, 1 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt
+
+Memory: 4k page, physical 4111128k(833724k free), swap 8220392k(1180984k free)
+
+vm_info: Java HotSpot(TM) Client VM (21.0-b17) for windows-x86 JRE (1.7.0-b147), built on Jun 27 2011 02:25:52 by "java_re" with unknown MS VC++:1600
+
+time: Thu Oct 08 15:36:33 2015
+elapsed time: 0 seconds
+

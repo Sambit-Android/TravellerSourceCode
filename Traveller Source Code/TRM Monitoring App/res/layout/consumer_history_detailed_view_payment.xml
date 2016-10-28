@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/boundary_chart2"
+            android:orientation="vertical"
+            android:padding="2dp" >
+
+              <TableRow
+                android:id="@+id/fsjijhsuioja667"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_header_heading"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1.5"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:text="Payment Details"
+                    android:textStyle="bold"
+                    android:id="@+id/consumerdetailstitle"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                
+            </TableRow>
+            
+            <TableRow
+                android:id="@+id/fsjijhsuioja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_light"
+                android:weightSum="2"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:text="Receipt Date"
+                    android:textStyle="bold"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </TableRow>
+            
+            <TableRow
+                android:id="@+id/fsjijhsuioj222"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_dark"
+                android:weightSum="2"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Receipt No"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" 
+                    />
+
+                <TextView
+                    android:id="@+id/info1"
+                    android:layout_width="0dp"
+                    android:autoLink="phone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </TableRow>
+            
+
+            <TableRow
+                android:id="@+id/fsjijhsuioj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_light"
+                android:weightSum="2"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Amount"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/info2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                   
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </TableRow>
+
+            
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Branch"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/info3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" 
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_light" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Towards"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   
+                    android:id="@+id/info4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Cash Type"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   
+                    android:id="@+id/info5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_light" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Payment Mode"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   
+                    android:id="@+id/info6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Book No"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   
+                    android:id="@+id/info7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_light" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Reason"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   
+                    android:id="@+id/info8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            
+           
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/detailed_mr_card_row_dark" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Entry Date"
+                    android:textColor="@color/Black"
+                    android:typeface="normal" />
+
+                <TextView
+                   
+                    android:id="@+id/info9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            
+            
+        </LinearLayout>
+    
+
+</ScrollView>

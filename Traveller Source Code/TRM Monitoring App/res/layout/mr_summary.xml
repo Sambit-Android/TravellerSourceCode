@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dashboard_inner_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/summary_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/report"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/dashboard_header_footer"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:clickable="false"
+            android:padding="5dp"
+            android:src="@drawable/summ" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.85"
+            android:clickable="false"
+            android:gravity="center"
+            android:text="MR WISE SUMMARY REPORT"
+            android:textColor="@color/White"
+            android:textSize="17sp" />
+
+        <!--
+         <ImageView
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:clickable="false"
+             android:src="@drawable/arrowimage" />
+        -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detailed_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/report"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/dashboard_header_footer"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:clickable="false"
+            android:padding="5dp"
+            android:src="@drawable/detai" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.85"
+            android:clickable="false"
+            android:gravity="center"
+            android:text="MR WISE DETAILED REPORT"
+            android:textColor="@color/White"
+            android:textSize="17sp" />
+
+        <!--
+         <ImageView
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:clickable="false"
+             android:src="@drawable/arrowimage" />
+        -->
+
+    </LinearLayout>
+    
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+	<LinearLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+    <TextView
+        android:id="@+id/section"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/strip"
+        android:text="Details For YELWALA"
+        android:visibility="gone"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        android:textSize="15dp" />
+    
+    <TextView
+        android:id="@+id/todaysdate2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:background="@drawable/strip"
+        android:text="Today's Bill Progress - 19/09/2016"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        android:textSize="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/textView111"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/seal_circle_blue"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            android:text="TOTAL MRs LIVE\n"
+            android:textColor="@color/White" />
+
+        <TextView
+            android:id="@+id/textView222"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/seal_circle_blue"
+            android:gravity="center"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:text="TOTAL BILLS\nGENERATED\n"
+            android:textColor="@color/White" />
+
+        
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/todaysdate"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:background="@drawable/strip"
+        android:text="Current Month Progress As On 16-Sep-2016"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        android:textSize="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/seal_circle_blue"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            android:text="TARGET\n"
+            android:textColor="@color/White" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/seal_circle_blue"
+            android:gravity="center"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:text="COMPLETED\n"
+            android:textColor="@color/White" />
+
+        <TextView
+            android:id="@+id/textView300"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/seal_circle_blue"
+            android:gravity="center"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:text="PERCENTAGE\n"
+            android:textColor="@color/White" />
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/lastmonthdate"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="@drawable/strip"
+        android:text="Previous Month Progress As On 16-Aug-2016"
+        android:textColor="@color/White"
+        android:textSize="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:text="TARGET\n"
+            android:background="@drawable/seal_circle_blue"
+            android:gravity="center"
+            android:textSize="11sp"
+            android:textColor="@color/White" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:background="@drawable/seal_circle_blue"
+            android:gravity="center"
+            android:text="COMPLETED\n"
+            android:textSize="11sp"
+            android:textColor="@color/White" />
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:text="PERCENTAGE\n"
+            android:background="@drawable/seal_circle_blue"
+            android:gravity="center"
+            android:textSize="11sp"
+            android:textColor="@color/White" />
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

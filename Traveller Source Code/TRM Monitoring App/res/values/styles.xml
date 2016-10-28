@@ -1,0 +1,150 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+   <!-- <style name="btnJvnnlBlue" parent="@android:style/Widget.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/button_main</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:gravity">center</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:shadowRadius">0.6</item>
+        <item name="android:padding">10dip</item>
+    </style> -->
+    
+   <style name="JVNNL" parent="AppBaseTheme">
+        <item name="android:actionBarStyle">@style/JVNNLActionBar</item>
+        <item name="android:buttonStyle">@style/btnJvnnlBlue</item>
+        <item name="android:dropDownSelector">@style/spinnerStyle</item>
+        <item name="android:editTextStyle">@style/editTextStyle</item>
+    </style>
+    
+   <style name="editTextStyle" parent="@android:style/Widget.EditText">
+        <item name="android:background">@android:drawable/edit_text</item>
+    </style>
+    
+   <style name="spinnerStyle" parent="@android:style/Widget.Spinner.DropDown">
+        <item name="android:background">@android:drawable/editbox_dropdown_light_frame</item>
+        <item name="android:popupBackground">@android:drawable/edit_text</item>
+    </style>
+    
+   <style name="JVNNLActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <!-- <item name="android:icon">@drawable/huda</item> -->
+        <item name="android:background">@color/WhiteSmoke</item>
+        <item name="android:titleTextStyle">@style/TitleColorJvnnl</item>
+    </style>
+    
+   <style name="TitleColorJvnnl" parent="android:TextAppearance">
+        <item name="android:textColor">@color/androidBlue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+        
+   <style name="btnJvnnlBlue" parent="@android:style/Widget.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">@color/DarkGray</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">0.6</item>
+        <item name="android:background">@drawable/button_main</item>
+        <item name="android:padding">10dip</item>
+    </style>
+    
+ <style name="MooTheme" parent="android:Theme">
+        <item name="android:spinnerItemStyle">@style/MooSpinnerItem</item>
+    </style>
+
+    <style name="MooSpinnerItem" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:textAppearance">@style/MooTextAppearanceSpinnerItem</item>
+    </style>
+
+    <style name="MooTextAppearanceSpinnerItem" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">#F00</item>
+    </style>
+    
+    
+    <!-- <style name="MyRadioButton" parent="Theme.AppCompat.Light">  
+    <item name="colorControlNormal">@color/indigo</item>
+    <item name="colorControlActivated">@color/pink</item>
+</style>  --> 
+    
+    
+     <style name="CustomFontStyle">
+      <item name="android:layout_width">fill_parent</item>
+      <item name="android:layout_height">wrap_content</item>
+      <item name="android:capitalize">characters</item>
+      <item name="android:typeface">monospace</item>
+      <item name="android:textSize">12pt</item>
+      <item name="android:textColor">#080000</item>/> 
+   </style>
+   
+      <style name="MyTheme" parent="android:Theme.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/Black</item>
+        <item name="android:listViewStyle">@style/MyListView</item>
+    </style>
+
+    <style name="MyListView" parent="@android:style/Widget.ListView">
+        <item name="android:listSelector">@android:drawable/ic_menu_save</item>
+    </style>
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
+
+  </style>
+
+  <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+
+  </style>
+  
+  <style name="SpinnerDropDownItem">
+        <item name="android:gravity">center|left</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:dropDownWidth">100dp</item>
+        <item name="android:height">41dp</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:background">@drawable/my_rectangle</item>
+    </style>
+    <style name="CustomAlertDialogStyle">
+    <item name="android:bottomBright">@color/detailed_mr_card_header_subheading</item>
+    <item name="android:bottomDark">@color/detailed_mr_card_header_subheading</item>
+    <item name="android:bottomMedium">@color/detailed_mr_card_header_subheading</item>
+    <item name="android:centerBright">@color/detailed_mr_card_header_subheading</item>
+    <item name="android:centerDark">@color/detailed_mr_card_header_subheading</item>
+    <item name="android:centerMedium">@color/detailed_mr_card_header_subheading</item>
+    <item name="android:fullBright">@color/detailed_mr_card_header_subheading</item>
+    <item name="android:fullDark">@color/detailed_mr_card_header_subheading</item>
+    <item name="android:topBright">@color/detailed_mr_card_header_subheading</item>
+    <item name="android:topDark">@color/detailed_mr_card_header_subheading</item>
+</style>
+<style name="MyTheme2" parent="@android:style/Theme.Dialog">
+    <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+    <item name="android:windowBackground">@color/detailed_mr_card_header</item>
+    <item name="android:textColorPrimary">#000000</item>
+    <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:backgroundDimEnabled">true</item>
+    <item name="android:progressDrawable">@drawable/custom_progressbar</item>
+    <item name="android:textColor">#000000</item>
+    <item name="android:height">100dp</item>
+    <item name="android:width">100dp</item>
+    <item name="android:fadeEnabled">true</item>
+    <item name="android:padding">2dp</item>
+    <item name="android:gravity">center</item>
+</style>
+</resources>

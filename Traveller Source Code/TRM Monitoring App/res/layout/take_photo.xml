@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhiteSmoke"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/tableImage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:text="DTC THREE PHOTOS ARE MANDATORY"
+                android:typeface="serif" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:text="IP ONLY FIRST PHOTO IS MANDATORY"
+                android:typeface="serif" />
+
+            <LinearLayout
+                android:id="@+id/linearCamOne"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_light_gray"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imgPhotoOne"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                   />
+
+                <Button
+                    android:id="@+id/btnCapture"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="50"
+                    android:background="@color/androidBlue"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="@string/frontView"
+                    android:textColor="@color/White"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="50"
+                    android:background="@color/androidBlue"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="@string/browse"
+                    android:textColor="@color/White"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearCamTwo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_light_gray"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imgPhotoTwo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"/>
+
+                <Button
+                    android:id="@+id/btnCaptureTwo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="50"
+                    android:background="@color/androidBlue"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="@string/rightSide"
+                    android:textColor="@color/White"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="50"
+                    android:background="@color/androidBlue"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="@string/browse"
+                    android:textColor="@color/White"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearCamThree"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_light_gray"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imgPhotoThree"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp" />
+
+                <Button
+                    android:id="@+id/btnCaptureThree"
+                    android:layout_width="0dp" android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/androidBlue"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="@string/leftSide"
+                    android:textColor="@color/White"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="50"
+                    android:background="@color/androidBlue"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="@string/browse"
+                    android:textColor="@color/White"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+      
+        <Button
+            android:id="@+id/btnSavePhoto"
+            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/border_green"
+            android:drawableRight="@android:drawable/ic_menu_save"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="@string/Create"
+            android:textColor="@color/White"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="serif"  />
+    </LinearLayout>
+
+</ScrollView>

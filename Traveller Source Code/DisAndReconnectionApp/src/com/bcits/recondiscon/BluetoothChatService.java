@@ -1,0 +1,739 @@
+/*
+ * Copyright (C) 2009 The Android Open Source Project
+ *createRfcommSocketToServiceRecord
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.bcits.recondiscon;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.UUID;
+
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothServerSocket;
+import android.bluetooth.BluetoothSocket;
+import android.content.Context;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Environment;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
+
+import com.bcits.utils.AmrMethods;
+
+
+/******************* DO NOT delete any of the line (Even commented lines)********************************/
+/**
+ * This class does all the work for setting up and managing Bluetooth
+ * connections with other devices. It has a thread that listens for incoming
+ * connections, a thread for connecting with a device, and a thread for
+ * performing data transmissions when connected.
+ */
+public class BluetoothChatService  
+{
+	String mvfwdmsg  ;
+	Handler handler = new Handler() ;
+	private  BluetoothSocket mmSocket;
+	private  InputStream mmInStream;
+	private  OutputStream mmOutStream;
+	
+	static File dir = new File(Environment.getExternalStorageDirectory() + "");
+	// Debugging
+	private static final String TAG = "BluetoothChatService";
+	private static final boolean D = true;
+	// Name for the SDP record when creating server socket
+	private static final String NAME = "BluetoothChat";
+
+	// Unique UUID for this application
+	private static final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+
+	// Member fields
+	private final BluetoothAdapter mAdapter;
+	private final Handler mHandler;
+	private AcceptThread mAcceptThread;
+	private ConnectThread mConnectThread;
+	private ConnectedThread mConnectedThread;
+	private int mState;
+
+	// Constants that indicate the current connection state
+	public static final int STATE_NONE = 0; // we're doing nothing
+	public static final int STATE_LISTEN = 1; // now listening for incoming
+	// connections
+	public static final int STATE_CONNECTING = 2; // now initiating an outgoing
+	// connection
+	public static final int STATE_CONNECTED = 3; // now connected to a remote
+	// device
+	Context context = null;
+
+	public BluetoothChatService(Context context, Handler handler) {
+		mAdapter = BluetoothAdapter.getDefaultAdapter();
+		mState = STATE_NONE;
+		mHandler = handler;
+		this.context = context ;
+	}
+
+	private synchronized void setState(int state) {
+		if (D)
+			Log.d(TAG, "setState() " + mState + " -> " + state);
+		mState = state;
+
+		// Give the new state to the Handler so the UI Activity can update
+		mHandler.obtainMessage(BluetoothChat.MESSAGE_STATE_CHANGE, state, -1)
+		.sendToTarget();
+	}
+
+	public synchronized int getState() {
+		return mState;
+	}
+
+	public synchronized void start() {
+		if (D)
+			Log.d(TAG, "start");
+
+		// Cancel any thread attempting to make a connection
+		if (mConnectThread != null) {
+			mConnectThread.cancel();
+			mConnectThread = null;
+		}
+
+		// Cancel any thread currently running a connection
+		if (mConnectedThread != null) {
+			mConnectedThread.cancel();
+			mConnectedThread = null;
+		}
+
+		// Start the thread to listen on a BluetoothServerSocket
+		if (mAcceptThread == null) {
+			mAcceptThread = new AcceptThread();
+			mAcceptThread.start();
+		}
+		setState(STATE_LISTEN);
+	}
+
+	public synchronized void connect(BluetoothDevice device) {
+		if (D)
+			Log.d(TAG, "connect to: " + device);
+
+		// Cancel any thread attempting to make a connection
+		if (mState == STATE_CONNECTING) {
+			if (mConnectThread != null) {
+				mConnectThread.cancel();
+				mConnectThread = null;
+			}
+		}
+
+		// Cancel any thread currently running a connection
+		if (mConnectedThread != null) {
+			mConnectedThread.cancel();
+			mConnectedThread = null;
+		}
+
+		// Start the thread to connect with the given device
+		mConnectThread = new ConnectThread(device);
+		mConnectThread.start();
+		setState(STATE_CONNECTING);
+	}
+
+	public synchronized void connected(BluetoothSocket socket,
+			BluetoothDevice device) {
+		if (D)
+			Log.d(TAG, "connected");
+
+		// Cancel the thread that completed the connection
+		if (mConnectThread != null) {
+			mConnectThread.cancel();
+			mConnectThread = null;
+		}
+
+		// Cancel any thread currently running a connection
+		if (mConnectedThread != null) {
+			mConnectedThread.cancel();
+			mConnectedThread = null;
+		}
+
+		// Cancel the accept thread because we only want to connect to one
+		// device
+		if (mAcceptThread != null) {
+			mAcceptThread.cancel();
+			mAcceptThread = null;
+		}
+
+		// Start the thread to manage the connection and perform transmissions
+		mConnectedThread = new ConnectedThread(socket);
+		//mConnectedThread.start();
+
+		// Send the name of the connected device back to the UI Activity
+		Message msg = mHandler.obtainMessage(BluetoothChat.MESSAGE_DEVICE_NAME);
+		Bundle bundle = new Bundle();
+		bundle.putString(BluetoothChat.DEVICE_NAME, device.getName());
+		msg.setData(bundle);
+		mHandler.sendMessage(msg);
+
+		setState(STATE_CONNECTED);
+	}
+
+	/**
+	 * Stop all threads
+	 */
+	public synchronized void stop() {
+		if (D)
+			Log.d(TAG, "stop");
+		if (mConnectThread != null) {
+			mConnectThread.cancel();
+			mConnectThread = null;
+		}
+		if (mConnectedThread != null) {
+			mConnectedThread.cancel();
+			mConnectedThread = null;
+		}
+		if (mAcceptThread != null) {
+			try {
+				mAcceptThread.cancel();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			mAcceptThread = null;
+		}
+		setState(STATE_NONE);
+	}
+
+	/**
+	 * Write to the ConnectedThread in an unsynchronized manner
+	 * 
+	 * @param out
+	 *            The bytes to write
+	 * @see ConnectedThread#write(byte[])
+	 */
+	
+	
+	
+	public class PrintBill extends AsyncTask<Void,  Void, Void>{
+		ArrayList<String> allData;
+		ProgressDialog barProgressBar;
+		String sdo,listNo;
+		byte[] totalConnections,totalReconne,totalDisconne,totalDisconnected,totalReconnected,failedDisconnection;
+		Context context;
+		ConnectedThread r;
+		byte[]heading1,  heading2;
+		public PrintBill(Context context, byte[] heading1, byte[] heading2,String sdo,String listNo,byte[] headTotalConnection,byte[] headTotalDiconnecti,byte[] headTotalDisconnected,byte[] headTotalFailedDisc,byte[] headTotalReconnection,byte[] headTotalReconnected,ArrayList<String>allData){
+			
+			this.context=context;
+			this.heading1 = heading1;
+			this.heading2 = heading2;
+			this.allData =allData;
+			synchronized (this) {
+				if (mState != STATE_CONNECTED)
+					return;
+				r = mConnectedThread;
+			}
+
+			this.barProgressBar =new ProgressDialog(context);
+			this.barProgressBar.setCancelable(false);
+			this.barProgressBar.setMessage("Printing\nPlease Wait...");
+			this.barProgressBar.show();
+			this.sdo=sdo;
+			this.listNo = listNo;
+			this.totalConnections = headTotalConnection;
+			this.totalReconne = headTotalDiconnecti;
+			this.totalDisconne = headTotalDisconnected;
+			this.totalDisconnected = headTotalFailedDisc;
+			this.totalReconnected = headTotalReconnection;
+			this.failedDisconnection = headTotalReconnected;
+		}
+		
+		@Override
+		protected Void doInBackground(Void... params) {
+			
+			if(BluetoothChat.isReport)
+			{
+				//TODO
+				  try {
+			    		
+			    		byte[] rf=new byte[1];
+			    		rf[0]=0x0A;
+
+			    		mmOutStream.write(0x1B);
+						mmOutStream.write(0x4B);
+						mmOutStream.write(0x03);
+			    		
+			    		
+			    	/*	mmOutStream.write(0x1B);         
+			    		mmOutStream.write(0x4B); 
+			    		mmOutStream.write(0x0C);
+
+			    		mmOutStream.write(0x1D);
+
+			    		mmOutStream.write(0x1B);         
+			    		mmOutStream.write(0x4B); 
+			    		mmOutStream.write(0x0C);
+
+			    		mmOutStream.write(0x1C);*/
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(heading1); // subdevision name
+			    		mmOutStream.write(rf);
+			    		
+/*
+			    		mmOutStream.write(0x1B);         
+			    		mmOutStream.write(0x4B); 
+			    		mmOutStream.write(0x0C);
+
+			    		mmOutStream.write(0x1D);*/
+			    		/*mmOutStream.write(rf);*/
+			    		mmOutStream.write("                WORK REPORT".getBytes());
+			    		mmOutStream.write(rf);
+
+			    		try {
+							String head3= "SDO CODE : "+sdo+"          LIST NO. : "+listNo;
+							mmOutStream.write(head3.getBytes());
+							mmOutStream.write(rf);
+							mmOutStream.write("  - - - - - - - - - - - - - - - - - - - - - -  ".getBytes()); // bill given date
+							mmOutStream.write(rf);
+							
+	
+							mmOutStream.write(" ".getBytes());
+							mmOutStream.write(totalConnections);
+							mmOutStream.write(rf);
+							
+							mmOutStream.write(" ".getBytes());
+							mmOutStream.write(totalDisconne);
+							mmOutStream.write(rf);
+							
+							mmOutStream.write(" ".getBytes());
+							mmOutStream.write(totalDisconnected);
+							mmOutStream.write(rf);
+							
+							mmOutStream.write(" ".getBytes());
+							mmOutStream.write(failedDisconnection);
+							mmOutStream.write(rf);
+							
+							mmOutStream.write(" ".getBytes());
+							mmOutStream.write(totalReconne);
+							mmOutStream.write(rf);
+							
+							mmOutStream.write(" ".getBytes());
+							mmOutStream.write(totalReconnected);
+							mmOutStream.write(rf);
+							
+							for (int i = 0; i < allData.size(); i++) {
+								mmOutStream.write(allData.get(i).getBytes());
+								mmOutStream.write(rf);
+							}
+							
+			    		} catch (Exception e) {
+							e.printStackTrace();
+						}
+			    		
+			    		
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+			    		/*mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);*/
+			        	mmOutStream.flush();
+			        		
+			        		
+			        		
+			        	} catch (IOException e) {
+			        		Log.e(TAG, "Exception during write", e);
+			        	}
+			}else {
+				//TODO
+				
+				
+				  try {
+			    		
+			    		byte[] rf=new byte[1];
+			    		rf[0]=0x0A;
+			    		byte[] rfTAB=new byte[1];
+			    		rfTAB[0]=0x09;
+
+			    		mmOutStream.write(0x1B);         
+			    		mmOutStream.write(0x4B); 
+			    		mmOutStream.write(0x0C);
+
+			    		mmOutStream.write(0x1D);
+
+			    		mmOutStream.write(0x1B);         
+			    		mmOutStream.write(0x4B); 
+			    		mmOutStream.write(0x0C);
+
+			    		mmOutStream.write(0x1C);
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+
+			    		mmOutStream.write("         ".getBytes());
+			    		mmOutStream.write(heading1); // subdevision name
+			    		mmOutStream.write(rf);
+
+			    		mmOutStream.write(0x1B);         
+			    		mmOutStream.write(0x4B); 
+			    		mmOutStream.write(0x0C);
+
+			    		mmOutStream.write(0x1D);
+			    		/*mmOutStream.write(rf);*/
+			    		mmOutStream.write("         Disconnection Notice".getBytes());
+			    		
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+
+			    		mmOutStream.write("      Consumer RRNO :".getBytes());
+			    		mmOutStream.write((DisconnectionView.disc.getRrno()).getBytes()); // bill given date
+			    		mmOutStream.write(rf);
+
+			    		
+			    		mmOutStream.write("      Consumer Name :".getBytes());
+			    		mmOutStream.write((DisconnectionView.disc.getConsumer_name()).getBytes()); // bill given date
+			    		mmOutStream.write(rf);
+			    		
+			    		mmOutStream.write("      Dis Date :".getBytes());
+			    		mmOutStream.write((AmrMethods.getCurrentTimeStamp()).getBytes()); // bill given date
+			    		mmOutStream.write(rf);
+			    		
+			    		mmOutStream.write("      Arrears  :".getBytes());
+			    		mmOutStream.write((DisconnectionView.disc.getArrears()).getBytes()); // bill given date
+			    		mmOutStream.write(rf);
+			    		
+			    		mmOutStream.write("      Address  :".getBytes());
+			    		
+			    		if(DisconnectionView.disc.getAddress().length()>25){
+
+			        		mmOutStream.write((DisconnectionView.disc.getAddress().substring(25)).getBytes()); // bill given date
+			        		mmOutStream.write(rf);
+			    		}
+			    		else{
+
+			        		mmOutStream.write((DisconnectionView.disc.getAddress()).getBytes()); // bill given date
+			        		mmOutStream.write(rf);
+			    		}
+			    		
+			    	//	if (DisconnectionView.disc.getMtrcode() == null | DisconnectionView.disc.getMtrcode().length() == 0) 
+			    	//		{
+			        		/*mmOutStream.write("      MR Reader  :".getBytes());
+			        		mmOutStream.write(("MR1234").getBytes()); // bill given date
+			        		mmOutStream.write(rf);*/
+			        		//	}
+			    	/*		else{
+			    		mmOutStream.write("      MR Reader  :".getBytes());
+			    		mmOutStream.write((DisconnectionView.disc.getMtrcode()).getBytes()); // bill given date
+			    		mmOutStream.write(rf);
+			    			}
+			    		*/
+			    		
+			    		mmOutStream.write("         Please Make the Payment ".getBytes());
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write("         to keep the connection active".getBytes());
+			    		
+			    		mmOutStream.write(rf);
+			    		
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+			    		mmOutStream.write(rf);
+			        	mmOutStream.flush();
+			        		
+			        		
+			        		
+			        	} catch (IOException e) {
+			        		Log.e(TAG, "Exception during write", e);
+			        	}
+			}
+			
+			return null;
+		}
+		
+	
+@Override
+protected void onPostExecute(Void result) {
+	super.onPostExecute(result);
+
+	try {
+		if(mmOutStream!=null){
+			mmOutStream.close();
+		}
+		if(mmSocket!=null){
+			mmSocket.close();
+		}
+		if(mmInStream!=null){
+			mmInStream.close();
+		}
+		this.barProgressBar.dismiss();
+		
+		
+		if(BluetoothChat.isReport) {
+			context.startActivity(new Intent(context, DashBoard.class));
+		}else {
+			context.startActivity(new Intent(context, DisconnectionView.class));
+		}
+		((Activity) context).finish();
+	} catch (Exception e) {
+	e.printStackTrace();
+	}
+	
+}
+	}
+	
+
+
+
+	/**
+	 * Indicate that the connection attempt failed and notify the UI Activity.
+	 */
+	private void connectionFailed() {
+		setState(STATE_LISTEN);
+
+		// Send a failure message back to the Activity
+		Message msg = mHandler.obtainMessage(BluetoothChat.MESSAGE_TOAST);
+		Bundle bundle = new Bundle();
+		bundle.putString(BluetoothChat.TOAST, "Unable to connect device");
+		msg.setData(bundle);
+		mHandler.sendMessage(msg);
+	}
+
+	/**
+	 * Indicate that the connection was lost and notify the UI Activity.
+	 */
+	private void connectionLost() {
+		setState(STATE_LISTEN);
+
+		// Send a failure message back to the Activity
+		Message msg = mHandler.obtainMessage(BluetoothChat.MESSAGE_TOAST);
+		Bundle bundle = new Bundle();
+		bundle.putString(BluetoothChat.TOAST, "Device connection was lost");
+		msg.setData(bundle);
+		mHandler.sendMessage(msg);
+	}
+
+	/**
+	 * This thread runs while listening for incoming connections. It behaves
+	 * like a server-side client. It runs until a connection is accepted (or
+	 * until cancelled).
+	 */
+	private class AcceptThread extends Thread {
+		// The local server socket
+		private final BluetoothServerSocket mmServerSocket;
+
+		public AcceptThread() {
+			BluetoothServerSocket tmp = null;
+
+			// Create a new listening server socket
+			try {
+				tmp = mAdapter
+						.listenUsingRfcommWithServiceRecord(NAME, MY_UUID);
+			} catch (IOException e) {
+e.printStackTrace(); 
+			}
+			mmServerSocket = tmp;
+		}
+
+		public void run() {
+			if (D)
+				Log.d(TAG, "BEGIN mAcceptThread" + this);
+			setName("AcceptThread");
+			BluetoothSocket socket = null;
+
+			// Listen to the server socket if we're not connected
+			while (mState != STATE_CONNECTED) {
+				try {
+					// This is a blocking call and will only return on a
+					// successful connection or an exception
+					
+					//if(mmServerSocket!=null) //BY SHIVA
+					//socket = mmServerSocket.accept();
+				} catch (Exception e) {
+					Log.e(TAG, "accept() failed", e);
+					break;
+				}
+
+				// If a connection was accepted
+				if (socket != null) {
+					synchronized (BluetoothChatService.this) {
+						switch (mState) {
+						case STATE_LISTEN:
+						case STATE_CONNECTING:
+							// Situation normal. Start the connected thread.
+							connected(socket, socket.getRemoteDevice());
+							break;
+						case STATE_NONE:
+						case STATE_CONNECTED:
+							// Either not ready or already connected. Terminate
+							// new socket.
+							try {
+								socket.close();
+							} catch (IOException e) {
+								Log.e(TAG, "Could not close unwanted socket", e);
+							}
+							break;
+						}
+					}
+				}
+			}
+			if (D)
+				Log.i(TAG, "END mAcceptThread");
+		}
+
+		public void cancel() {
+			if (D)
+				Log.d(TAG, "cancel " + this);
+			try {
+				mmServerSocket.close();
+			} catch (Exception e) {
+				Log.e(TAG, "close() of server failed", e);
+			}
+		}
+	}
+
+	/**
+	 * This thread runs while attempting to make an outgoing connection with a
+	 * device. It runs straight through; the connection either succeeds or
+	 * fails.
+	 */
+	private class ConnectThread extends Thread {
+		private final BluetoothSocket mmSocket;
+		private final BluetoothDevice mmDevice;
+
+		public ConnectThread(BluetoothDevice device) {
+			mmDevice = device;
+			BluetoothSocket tmp = null;
+
+			// Get a BluetoothSocket for a connection with the
+			// given BluetoothDevice
+			try {
+				tmp = device.createRfcommSocketToServiceRecord(MY_UUID);
+			} catch (IOException e) {
+				Log.e(TAG, "create() failed", e);
+			}
+			mmSocket = tmp;
+		}
+
+		public void run() {
+			Log.i(TAG, "BEGIN mConnectThread");
+			setName("ConnectThread");
+
+			// Always cancel discovery because it will slow down a connection
+			mAdapter.cancelDiscovery();
+
+			// Make a connection to the BluetoothSocket
+			try {
+				// This is a blocking call and will only return on a
+				// successful connection or an exception
+				mmSocket.connect();
+			} catch (IOException e) {
+				connectionFailed();
+				try {
+					mmSocket.close();
+				} catch (IOException e2) {
+					Log.e(TAG,"unable to close() socket during connection failure",
+							e2);
+				}
+				// Start the service over to restart listening mode
+				BluetoothChatService.this.start();
+				return;
+			}
+
+			// Reset the ConnectThread because we're done
+			synchronized (BluetoothChatService.this) {
+				mConnectThread = null;
+			}
+
+			// Start the connected thread
+			connected(mmSocket, mmDevice);
+		}
+
+		public void cancel() {
+			try {
+				mmSocket.close(); 
+			} catch (IOException e) {
+				Log.e(TAG, "close() of connect socket failed", e);
+			}
+		}
+	}
+
+	private class ConnectedThread extends Thread {
+	
+
+		public ConnectedThread(BluetoothSocket socket) {
+			Log.d(TAG, "create ConnectedThread");
+			mmSocket = socket;
+			InputStream tmpIn = null;
+			OutputStream tmpOut = null;
+
+			try {
+				tmpIn = socket.getInputStream();
+				tmpOut = socket.getOutputStream();
+			} catch (IOException e) {
+				Log.e(TAG, "temp sockets not created", e);
+			}
+
+			mmInStream = tmpIn;
+			mmOutStream = tmpOut;
+
+		}
+
+		public void run() {
+			Log.i(TAG, "BEGIN mConnectedThread");
+			byte[] buffer = new byte[1024];
+			int bytes;
+
+			// Keep listening to the InputStream while connected
+			while (true) {
+				try {
+					// Read from the InputStream
+					bytes = mmInStream.read(buffer);
+
+					// Send the obtained bytes to the UI Activity
+					mHandler.obtainMessage(BluetoothChat.MESSAGE_READ, bytes,
+							-1, buffer).sendToTarget();
+				} catch (IOException e) {
+					Log.e(TAG, "disconnected", e);
+					connectionLost();
+					break;
+				}
+			}
+		}
+
+	
+	
+
+		public void cancel() 
+		{
+			try 
+			{
+				mmSocket.close();
+			} catch (IOException e) 
+			{
+				Log.e(TAG, "close() of connect socket failed", e);
+			}
+		}
+	}
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/detailed_mr_card_row_dark"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="4" >
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Ticket01"
+        android:textColor="@color/Black"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1.25"
+        android:gravity="center"
+        android:text="Phone Not Working"
+        android:textColor="@color/Red"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1.25"
+        android:gravity="center"
+        android:singleLine="false"
+        android:text="Reopened"
+        android:textColor="@color/Black"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/buttonticket"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="0.5"
+        android:background="#306bff"
+        android:gravity="center"
+        android:src="@drawable/listlistlist"
+        android:textColor="@color/White" />
+
+</LinearLayout>

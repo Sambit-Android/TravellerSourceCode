@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@color/White"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:id="@+id/linearHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_light_gray"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imgGoToDisconnection"
+                style="@style/AppBaseTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:clickable="false"
+                android:src="@android:drawable/ic_input_add" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="41dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/addip"
+                android:textColor="@color/DarkGreen"
+                android:textStyle="bold"
+                android:typeface="serif" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:text="@string/status"
+            android:textColor="@color/Gray"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/border_light_gray"
+            android:padding="3dp"
+            android:stretchColumns="0" >
+
+            <TableRow
+                android:id="@+id/tableRowTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/totalconnections"
+                    android:textColor="@color/androidBlue3"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="32dp"
+                    android:background="@color/Gray" />
+
+                <TextView
+                    android:id="@+id/downloadedConnections"
+                    android:layout_width="84dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="0"
+                    android:textColor="@color/Red"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/totalinspections"
+                    android:textColor="@color/androidBlue3"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="32dp"
+                    android:background="@color/Gray" />
+
+                <TextView
+                    android:id="@+id/TotalConnection_ip"
+                    android:layout_width="84dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="0"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/border"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notsynced"
+                    android:textColor="@color/androidBlue3"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="32dp"
+                    android:background="@color/Gray" />
+
+                <LinearLayout android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/ipnotsynced_ip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="0"
+                        android:textColor="@color/DarkRed"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imgEditdetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:text="0"
+                        android:textColor="@color/DarkGreen"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/border"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/synced"
+                    android:textColor="@color/androidBlue3"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="32dp"
+                    android:background="@color/Gray" />
+
+                <TextView
+                    android:id="@+id/ipsynced_ip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="0"
+                    android:textColor="@color/DarkGreen"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:id="@+id/uploadofflinesync"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/border_light_gray"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:clickable="true"
+                android:padding="5dp"
+                android:src="@android:drawable/ic_menu_upload" />
+
+            <Button
+                android:id="@+id/btnUploadip"
+                style="@style/btnJvnnlBlue"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_gravity="right|center"
+                android:layout_weight="1"
+                android:text="@string/upload" >
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/border_light_gray"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:clickable="true"
+                android:padding="5dp"
+                android:src="@android:drawable/ic_menu_info_details" />
+
+            <Button
+                android:id="@+id/btnviewDetails"
+                style="@style/btnJvnnlBlue"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_gravity="right|center"
+                android:layout_weight="1"
+                android:text="@string/viewaccounts" >
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

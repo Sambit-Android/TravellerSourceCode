@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_gray"
+    android:gravity="top"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:text="Enumeration Details"
+        android:textColor="@color/Gray"
+        android:textStyle="bold"
+        android:typeface="serif" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/border_light_gray"
+                android:padding="3dp" >
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Date of Inspection"
+                        android:textColor="@color/androidBlue3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+                   <EditText
+                        android:id="@+id/dateofinsp"
+                         android:layout_width="0dp" 
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                       	android:textColor="@color/Black"
+                        android:ems="10" />
+
+                </TableRow>
+                
+                   <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/border_blue"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/latitudetextview"
+                         android:layout_width="0dp" 
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Circle"
+                        android:textColor="@color/androidBlue3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <Spinner
+                        android:id="@+id/spinner2"
+                        android:layout_width="0dp" 
+                        android:layout_weight="1"
+                        android:prompt="@string/select"
+                        android:layout_height="wrap_content"
+                        />
+
+                </TableRow>
+                
+                   <TableRow
+                    android:id="@+id/tableRow3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/border_blue"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/longitudetextview"
+                         android:layout_width="0dp" 
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Division"
+                        android:textColor="@color/androidBlue3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                      <Spinner
+                        android:id="@+id/spinner3"
+                        android:layout_width="0dp" 
+                        android:layout_weight="1"
+                        android:prompt="@string/select"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+                
+                           <TableRow
+                    android:id="@+id/tableRow6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/border_blue"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        
+                        android:layout_width="0dp" 
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="O and M Sub Division"
+                        android:textColor="@color/androidBlue3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                      <Spinner
+                        android:id="@+id/spinner4"
+                        android:layout_width="0dp" 
+                        android:layout_weight="1"
+                        android:prompt="@string/select"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+                   <TableRow
+                    android:id="@+id/tableRow4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/border"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/textView11"
+                         android:layout_width="0dp" 
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Sheet No"
+                        android:textColor="@color/androidBlue3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/sheetNo"
+                         android:layout_width="0dp" 
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                         android:inputType="number"
+                         android:textColor="@color/Black"
+                        android:ems="10"/>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/border_blue"
+                    android:gravity="center_vertical" >
+
+                <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="O M Unit"
+                        android:textColor="@color/androidBlue3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+ 				 
+                    <Spinner
+                        android:id="@+id/spinner6"
+                        android:layout_width="0dp" 
+                        android:layout_weight="1"
+                        android:prompt="@string/select"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow88"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/border_blue"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/textView40"
+                         android:layout_width="0dp" 
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Sub-Station"
+                        android:textColor="@color/androidBlue3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <Spinner
+                        android:id="@+id/spinner7"
+                        android:layout_width="0dp" 
+                        android:layout_weight="1"
+                        android:prompt="@string/select"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow98"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/border_blue"
+                    android:gravity="center_vertical" >
+
+                  
+                    <TextView
+                        android:id="@+id/textView31"
+                         android:layout_width="0dp" 
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="FeederNo and Name"
+                        android:textColor="@color/androidBlue3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <Spinner
+                        android:id="@+id/spinner17"
+                        android:layout_width="0dp" 
+                        android:layout_weight="1"
+                        android:prompt="@string/select"
+                        android:layout_height="wrap_content" />
+                </TableRow> 
+                     <TableRow
+                    android:id="@+id/tableRow15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/border"
+                    android:gravity="center_vertical" >
+
+                    <Button
+                        android:id="@+id/btnCreate"
+                        style="@style/btnJvnnlBlue"
+                       android:layout_width="0dp" 
+                        android:layout_weight="1"
+                        android:layout_height="fill_parent"
+                        android:text="Proceed" />
+
+                    <Button
+                        android:id="@+id/btnCancel"
+                        style="@style/btnJvnnlBlue"
+                         android:layout_width="0dp" 
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Cancel" />
+                </TableRow>
+                
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

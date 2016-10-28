@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/detailed_mr_card_row_dark"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="5.4" >
+
+    <TextView
+        android:id="@+id/mrcodetitle"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_weight="1.1"
+        android:gravity="center"
+        android:textColor="@color/Black"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/Black" />
+
+    <TextView
+        android:id="@+id/mrname"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_weight="1.1"
+        android:gravity="center"
+        android:textColor="@color/Black"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/Black" />
+
+    <TextView
+        android:id="@+id/mrmobile"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_weight="1.1"
+        android:autoLink="phone"
+        android:gravity="center"
+        android:textColor="@color/Black"
+        android:textColorLink="@color/detailed_mr_card_header"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/Black" />
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_weight="1.05"
+        android:gravity="center"
+        android:textColor="@color/Black"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/Black" />
+
+    <TextView
+        android:id="@+id/billingpercentage"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_weight="1.05"
+        android:gravity="center"
+        android:textColor="@color/Black"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

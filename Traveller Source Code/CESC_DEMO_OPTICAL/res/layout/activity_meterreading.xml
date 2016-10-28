@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:visibility="gone">
+
+            <TextView
+                android:layout_marginRight="10dp"
+                android:id="@+id/previousreading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/previousreading"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/previousreadingval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textStyle="bold"
+                android:textSize="18sp" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/presentreading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:focusableInTouchMode="true"
+                android:text="@string/presentreading"
+                android:textStyle="bold" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/presentreadin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:inputType="number" 
+                android:maxLength="6"
+                android:hint="Present Rdg"
+                android:digits="@string/inputpatterfornumeric"
+                android:singleLine="true"
+                >
+
+                <requestFocus>
+                </requestFocus>
+            </EditText>
+        </LinearLayout>
+
+        <Button  style="@style/btn_stand_for_homepage"
+            android:id="@+id/button_calc"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="5dp"
+             
+            android:text="Calculate" 
+            android:textColor="@color/blue_rem"
+            android:textSize="21sp">
+        </Button>
+        
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/Gray"
+            android:padding="1dip"
+            android:stretchColumns="0" >
+                 <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="right" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="35dip"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="@string/trivector_meter"
+                        android:textColor="@color/blue_rem"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+                </TableRow>
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+               android:gravity="center_vertical"
+                 android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/textView1"
+                   android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pf_reading"
+                    android:textColor="@color/androidBlue3"
+                    android:textSize="18sp"
+                    android:textStyle="bold" 
+                    android:singleLine="true"
+                     android:layout_weight="0.35"
+                     />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="32dp"
+                    android:background="@color/Gray" />
+
+                <EditText
+                android:id="@+id/pf_reading"
+                android:layout_width="0dip"
+                android:layout_height="50dip"
+                android:layout_marginLeft="3dip"
+                android:inputType="numberDecimal" 
+                android:maxLength="5"
+                android:hint="@string/pf_reading_hint"
+                android:digits="@string/inputpatterfornumeric_for_pf_bmd"
+                android:singleLine="true"
+                android:layout_weight="0.70"
+                
+                />
+
+               
+            
+            </TableRow>
+            
+             <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                 >
+
+                <TextView
+                   android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bmd_reading"
+                    android:textColor="@color/androidBlue3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" 
+                    android:layout_weight="0.35"
+                    android:singleLine="true"
+                    />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="32dp"
+                    android:background="@color/Gray" />
+
+                <EditText
+                android:id="@+id/bmd_reading"
+                android:layout_width="0dip"
+                android:layout_height="50dip"
+                android:layout_marginLeft="3dip"
+                android:inputType="numberDecimal" 
+                android:maxLength="6"
+                android:hint="@string/bmd_reading_hint"
+                android:digits="@string/inputpatterfornumeric_for_pf_bmd"
+                android:singleLine="true"
+                android:layout_weight="0.70"
+                >
+            </EditText>
+            </TableRow>
+             <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                 >
+
+                <TextView
+                   android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ckwh"
+                    android:textColor="@color/androidBlue3"
+                    android:textSize="14sp"
+                    android:textStyle="bold" 
+                    android:layout_weight="0.35"
+                    android:singleLine="true"
+                    />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="32dp"
+                    android:background="@color/Gray" />
+
+                <EditText
+                android:id="@+id/ckwh_reading"
+                android:layout_width="0dip"
+                android:layout_height="50dip"
+                android:layout_marginLeft="3dip"
+                android:inputType="numberDecimal" 
+                android:maxLength="4"
+                android:hint="@string/ckwh_hint"
+                android:digits="@string/inputpatterfornumeric"
+                android:singleLine="true"
+                android:layout_weight="0.70"
+                >
+            </EditText>
+            </TableRow>
+                </TableLayout> 
+            
+            </LinearLayout>
+        
+        
+
+        <Button
+            android:id="@+id/btnlogout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dip"
+            android:text="Back"
+            android:visibility="invisible" >
+        </Button>
+    </LinearLayout>
+
+</ScrollView>
+
+

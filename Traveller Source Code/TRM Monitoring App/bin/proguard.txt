@@ -1,0 +1,157 @@
+# view AndroidManifest.xml #generated:251
+-keep class com.auto.update.AndroidautoUpdateActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:253
+-keep class com.auto.update.InstallApk { <init>(...); }
+
+# view AndroidManifest.xml #generated:83
+-keep class com.bcits.cecsmrfinder.Add_IP { <init>(...); }
+
+# view AndroidManifest.xml #generated:85
+-keep class com.bcits.cecsmrfinder.Add_transformer { <init>(...); }
+
+# view AndroidManifest.xml #generated:235
+-keep class com.bcits.cecsmrfinder.ArrearsRRnoListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:239
+-keep class com.bcits.cecsmrfinder.ArrearsRRnoMapActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:109
+-keep class com.bcits.cecsmrfinder.ArrearsRangeGridActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:143
+-keep class com.bcits.cecsmrfinder.BillingProgress { <init>(...); }
+
+# view AndroidManifest.xml #generated:199
+-keep class com.bcits.cecsmrfinder.ConsumerHistoryAllDetails { <init>(...); }
+
+# view AndroidManifest.xml #generated:231
+-keep class com.bcits.cecsmrfinder.ConsumerHistoryMapActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:195
+-keep class com.bcits.cecsmrfinder.ConsumerHistorySearch { <init>(...); }
+
+# view AndroidManifest.xml #generated:89
+-keep class com.bcits.cecsmrfinder.ContactUs { <init>(...); }
+
+# view AndroidManifest.xml #generated:121
+-keep class com.bcits.cecsmrfinder.Dashboard { <init>(...); }
+
+# view AndroidManifest.xml #generated:105
+-keep class com.bcits.cecsmrfinder.DetailedMRCardActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:117
+-keep class com.bcits.cecsmrfinder.DetailedMRReportGrid { <init>(...); }
+
+# view AndroidManifest.xml #generated:97
+-keep class com.bcits.cecsmrfinder.DetailedViewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:203
+-keep class com.bcits.cecsmrfinder.DetailedViewActivityBilling { <init>(...); }
+
+# view AndroidManifest.xml #generated:211
+-keep class com.bcits.cecsmrfinder.DetailedViewActivityDeposit { <init>(...); }
+
+# view AndroidManifest.xml #generated:219
+-keep class com.bcits.cecsmrfinder.DetailedViewActivityMeter { <init>(...); }
+
+# view AndroidManifest.xml #generated:223
+-keep class com.bcits.cecsmrfinder.DetailedViewActivityMeterChange { <init>(...); }
+
+# view AndroidManifest.xml #generated:207
+-keep class com.bcits.cecsmrfinder.DetailedViewActivityPayment { <init>(...); }
+
+# view AndroidManifest.xml #generated:227
+-keep class com.bcits.cecsmrfinder.DeviceStatusAllDetails { <init>(...); }
+
+# view AndroidManifest.xml #generated:215
+-keep class com.bcits.cecsmrfinder.DeviceStatusSearch { <init>(...); }
+
+# view AndroidManifest.xml #generated:76
+-keep class com.bcits.cecsmrfinder.EditSavedTranasformer { <init>(...); }
+
+# view AndroidManifest.xml #generated:126
+-keep class com.bcits.cecsmrfinder.IPSET_Inspection { <init>(...); }
+
+# view AndroidManifest.xml #generated:62
+-keep class com.bcits.cecsmrfinder.Login { <init>(...); }
+
+# view AndroidManifest.xml #generated:151
+-keep class com.bcits.cecsmrfinder.MainSheet { <init>(...); }
+
+# view AndroidManifest.xml #generated:155
+-keep class com.bcits.cecsmrfinder.MainSheet_ip { <init>(...); }
+
+# view AndroidManifest.xml #generated:130
+-keep class com.bcits.cecsmrfinder.MapActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:147
+-keep class com.bcits.cecsmrfinder.MapSurvey { <init>(...); }
+
+# view AndroidManifest.xml #generated:134
+-keep class com.bcits.cecsmrfinder.MapSurveyArreas { <init>(...); }
+
+# view AndroidManifest.xml #generated:138
+-keep class com.bcits.cecsmrfinder.MapSurveyPerformance { <init>(...); }
+
+# view AndroidManifest.xml #generated:191
+-keep class com.bcits.cecsmrfinder.MapView { <init>(...); }
+
+# view AndroidManifest.xml #generated:73
+-keep class com.bcits.cecsmrfinder.MarkerDemoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:183
+-keep class com.bcits.cecsmrfinder.MasterFeeder { <init>(...); }
+
+# view AndroidManifest.xml #generated:167
+-keep class com.bcits.cecsmrfinder.MasterListView { <init>(...); }
+
+# view AndroidManifest.xml #generated:171
+-keep class com.bcits.cecsmrfinder.MasterListViewDTC { <init>(...); }
+
+# view AndroidManifest.xml #generated:163
+-keep class com.bcits.cecsmrfinder.MasterView { <init>(...); }
+
+# view AndroidManifest.xml #generated:101
+-keep class com.bcits.cecsmrfinder.MrSummaryActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:175
+-keep class com.bcits.cecsmrfinder.NewDtc { <init>(...); }
+
+# view AndroidManifest.xml #generated:93
+-keep class com.bcits.cecsmrfinder.RRnoMapActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:261
+-keep class com.bcits.cecsmrfinder.Registerticketactivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:113
+-keep class com.bcits.cecsmrfinder.RrnumberListCustomDesignActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:179
+-keep class com.bcits.cecsmrfinder.Settings { <init>(...); }
+
+# view AndroidManifest.xml #generated:79
+-keep class com.bcits.cecsmrfinder.TakePhoto { <init>(...); }
+
+# view AndroidManifest.xml #generated:259
+-keep class com.bcits.cecsmrfinder.TicketingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:159
+-keep class com.bcits.cecsmrfinder.Transformer_Inspection { <init>(...); }
+
+# view AndroidManifest.xml #generated:187
+-keep class com.bcits.cecsmrfinder.UnderConstruction { <init>(...); }
+
+# view AndroidManifest.xml #generated:256
+-keep class com.bcits.utils.BackgroundSyncServie { <init>(...); }
+
+# view res/layout/add_ipsets.xml #generated:563
+-keep class com.bcits.utils.MultiSelectionSpinner { <init>(...); }
+
+# view res/layout/activity_rrno_map.xml #generated:38
+# view res/layout/mapview.xml #generated:6
+-keep class com.google.android.gms.maps.MapFragment { <init>(...); }
+
+# view res/layout/activity_main.xml #generated:39
+-keep class com.google.android.gms.maps.SupportMapFragment { <init>(...); }
+

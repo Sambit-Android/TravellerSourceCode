@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/grey"
+    android:scrollbarSize="0dp"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/cesc_logo"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/linearLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/border_orange"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <LinearLayout
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="39dp"
+                    android:layout_height="39dp"
+                    android:layout_marginLeft="-9dp"
+                    android:src="@drawable/lock_one" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="23dp"
+                    android:gravity="left"
+                    android:text="Sign In"
+                    android:textColor="@color/White"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/version_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="23dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Version 1.2"
+                    android:textColor="@color/White"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+            </LinearLayout>
+            
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="275dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/sitecodeimage"
+                android:enabled="true"
+                android:inputType="number"
+                android:maxLength="4"
+                android:paddingLeft="59dp"
+                android:textSize="18sp" 
+               android:hint="SITE CODE" 
+                >
+            </EditText>
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="275dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/mrcodeimage"
+                android:enabled="true"
+                android:inputType="number"
+                android:maxLength="4"
+                android:paddingLeft="59dp"
+                android:textSize="18sp"
+                android:hint="MR CODE"
+                 >
+            </EditText>
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="275dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/user_name"
+                android:hint="List Number"
+                android:maxLength="25"
+                android:paddingLeft="59dp"
+                android:singleLine="true"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="275dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/password"
+                android:digits="0123456789"
+                android:inputType="textPassword|number"
+                android:maxLength="20"
+                android:paddingLeft="59dp"
+                android:password="true"
+                android:singleLine="true"
+                android:textSize="16sp" 
+                android:hint="PASSWORD"
+                
+                />
+
+            <Button
+                android:id="@+id/buttonLogin"
+                android:layout_width="275dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="25dp"
+                android:background="@android:drawable/btn_default"
+                android:gravity="center"
+                android:text="Login"
+                android:textColor="@color/androidBlue"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <!--
+                 <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/Gray" />
+            -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/Gray" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:layout_marginBottom="150dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/bcits_powered"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</ScrollView>

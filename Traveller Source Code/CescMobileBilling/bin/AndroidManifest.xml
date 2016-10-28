@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bcits.bsmartbilling"
+    android:versionCode="1"
+    android:versionName="1.54" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="23" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature android:name="android.hardware.usb.host" />
+    <uses-feature android:name="android.hardware.usb.accessory" />
+
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.MANAGE_USB" />
+    <uses-permission android:name="android.permission.SET_TIME_ZONE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/CESCOM" >
+        <activity
+            android:name="com.bcits.bsmartbilling.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.bcits.bsmartbilling.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bcits.bsmartbilling.Login"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bcits.bsmartbilling.PrintBillAction2"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.bcits.bsmartbilling.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bcits.bsmartbilling.Meterobservation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bcits.bsmartbilling.MeterReading"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bcits.bsmartbilling.CameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bcits.bsmartbilling.PrintBillAction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ShowImage"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".BluetoothChat"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".DeviceListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.auto.update.InstallApk"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.auto.update.AndroidautoUpdateActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.auto.update.ManualVersionUpdateActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.bcits.bsmartbilling.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bcits.bsmartbilling.ReportActionClass"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.bcits.bsmartbilling.BluetoothChat_Reports"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bcits.bsmartbilling.ReportViewHelper"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bcits.bsmartbilling.ViewUnBilledList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bcits.bsmartbilling.AmrBiller"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service android:name="com.bcits.bsmartbilling.MyAlarmService" >
+        </service>
+        <!--
+        <service android:name="com.bcits.bsmartbilling.LiveStatusService" >
+        </service>
+        -->
+        <!-- APP MANAGER LIB CALL -->
+        <!--
+        <activity
+            android:name="com.bcits.utilitymodelappmvs.DeviceInformationMainActiovity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.bcits.utilitymodelappmvs.DeviceRegistration"
+            android:screenOrientation="portrait" />
+        
+        
+        <activity
+            android:name="com.bcits.utilitymodelappmvs.DeviceInformation"
+            android:screenOrientation="portrait" />
+        -->
+
+
+        <!-- <service android:name="com.bcits.utilitymodelappmvs.UtilityAlarmService" /> -->
+
+        <activity
+            android:name="amr.usb.catcher.MasterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service android:name="amr.usb.utils.UsbRecieverService" />
+
+        <receiver android:name="amr.usb.utils.BootReciever" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.REBOOT" />
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+                <action android:name="android.intent.action.ACTION_APP_ERROR" />
+                <action android:name="android.intent.action.ACTION_MEDIA_BAD_REMOVAL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="amr.usb.utils.DummyUsbReceiver"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" >
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+    </application>
+
+</manifest>

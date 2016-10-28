@@ -1,0 +1,10 @@
+Map Key and Registration Information
+
+
+Key for Android apps (with certificates)
+API key:	
+AIzaSyAVTa0DryKUkOztNeqkBCYhXtvbBAQPjLU
+Android apps:	
+DC:20:1C:14:0D:8A:F0:4E:A8:DE:25:9E:DF:F1:98:79:AD:13:92:19;com.bcits.cecsip
+Activated on:	Jul 14, 2015 10:51 PM
+Activated by:	mejamu4u@gmail.com – you

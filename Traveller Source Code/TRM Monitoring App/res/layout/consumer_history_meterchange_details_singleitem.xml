@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:gravity="center"
+    android:id="@+id/linearlayout"
+    android:background="@color/detailed_mr_card_row_light"
+    android:orientation="horizontal"
+    android:weightSum="4" >
+
+    
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/billmonth"
+            android:layout_toRightOf="@+id/rowno"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="01/01/2016"
+            android:textColor="@color/Maroon"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="KWAH"
+            android:id="@+id/billunit"
+            android:textColor="@color/Black"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/rowno"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="NORMAL"
+            android:id="@+id/status"
+            android:textColor="@color/Black"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/netamt"
+            android:textColor="@color/Black"
+            android:text="1310.00"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+    
+
+    
+
+</LinearLayout>

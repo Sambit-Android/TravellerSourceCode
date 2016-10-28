@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+     android:background="@color/grey"
+    android:scrollbars="none" >
+    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/grey"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="@string/prevrr"
+                android:textStyle="bold" >
+            </Button>
+
+            <AutoCompleteTextView
+                android:id="@+id/accountno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="textCapCharacters"
+                android:maxLength="16"
+                android:width="200dp" >
+            </AutoCompleteTextView>
+
+            
+            
+            <Button
+                android:id="@+id/Button01"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="@string/nextrr"
+                android:textStyle="bold" >
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center|right"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="vertical" >
+
+                
+
+                
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/next"
+                style="@style/btnJvnnlBlue"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border_orange"
+                android:textSize="19sp"
+                android:text="Next" >
+            </Button>
+        </LinearLayout>
+
+        
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/Gray"
+            android:padding="3dp"
+            android:stretchColumns="0" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center" >
+
+                
+                  <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text=" Meter Replacement Status :"
+                    android:textColor="@color/androidBlue3"
+                    android:textStyle="bold" />
+                
+                  <View
+                    android:layout_width="1dp"
+                    android:layout_height="32dp"
+                    android:background="@color/Gray"
+                    android:visibility="gone" />
+                  
+                  
+                <Button
+                    android:id="@+id/btnlogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="LogOut"
+                    android:visibility="invisible" />
+
+                
+                
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total to be Replaced"
+                    android:textColor="@color/androidBlue3"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="32dp"
+                    android:background="@color/Gray" />
+
+                <TextView
+                    android:id="@+id/totalconnectionvalue"
+                    android:layout_width="84dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="12345"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                     />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PENDING"
+                    android:textColor="@color/androidBlue3"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="32dp"
+                    android:background="@color/Gray" />
+
+                <TextView
+                    android:id="@+id/nocunbilledvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="123"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold" 
+                    android:textSize="17sp"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="REPLACED"
+                    android:textColor="@color/androidBlue3"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="32dp"
+                    android:background="@color/Gray" />
+
+                <TextView
+                    android:id="@+id/nocbilledvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="123"
+                    android:textColor="@color/Red"
+                    android:textStyle="bold" 
+                    android:textSize="17sp"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Synced to server"
+                    android:textColor="@color/androidBlue3"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="32dp"
+                    android:background="@color/Gray" />
+
+                <TextView
+                    android:id="@+id/nocsyncedvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="123"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold" 
+                    android:textSize="17sp"
+                    />
+            </TableRow>
+              <TableRow
+                android:id="@+id/tableRow45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Synched to Server"
+                    android:textColor="@color/androidBlue3"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="32dp"
+                    android:background="@color/Gray" />
+
+                <TextView
+                    android:id="@+id/txtUnsynched"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="123"
+                    android:textSize="17sp"
+                    android:textColor="@color/Red"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+        
+        
+        
+      
+    </LinearLayout>
+
+</ScrollView>
+
+

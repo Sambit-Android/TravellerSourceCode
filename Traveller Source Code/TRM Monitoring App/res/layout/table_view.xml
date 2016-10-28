@@ -1,0 +1,443 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/White" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/border_light_gray"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imgPrevious"
+                style="@style/btnJvnnlBlue"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:clickable="true"
+                android:padding="5dp"
+                android:src="@drawable/ic_action_previous_item" />
+
+            <AutoCompleteTextView  android:digits="-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                android:id="@+id/txtAccountNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/screen_background_light_transparent"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/Red"
+                android:typeface="monospace" />
+
+            <ImageView
+                android:id="@+id/imgSearch"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/border"
+                android:clickable="true"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_action_search_dark" />
+
+            <ImageView
+                android:id="@+id/imgNext"
+                style="@style/btnJvnnlBlue"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:padding="5dp"
+                android:src="@drawable/ic_action_next_item" />
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/boundary_chart"
+            android:padding="2dp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@color/detailed_mr_card_header"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:text="MR Performance Details"
+                android:textColor="@color/White"
+                android:typeface="normal" />
+            
+            <TableRow
+                android:id="@+id/fsjijhsuiojamrcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_header_subheading"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:text="MR Code"
+                    android:textStyle="bold"
+                    android:textColor="@color/DarkGray"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/txtmrcode"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1.8"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textSize="17sp"
+                    android:text="123"
+                    android:textColor="@color/Red"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </TableRow>
+            
+            
+            <TableRow
+                android:id="@+id/fsjijhsuioja"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_light"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:text="MR Name"
+                    android:textStyle="bold"
+                    android:textColor="@color/DarkGray"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/txtmrname"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1.8"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:text="123"
+                    android:textColor="@color/DarkGray"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </TableRow>
+            
+            <TableRow
+                android:id="@+id/fsjijhsuioj222"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_header_subheading"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Mobile Number"
+                    android:textColor="@color/DarkGray"
+                    android:typeface="normal" 
+                    />
+
+                <TextView
+                    android:id="@+id/txtcontact"
+                    android:layout_width="0dp"
+                    android:autoLink="phone"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1.8"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textSize="17sp"
+                  	android:textColorLink="@color/DarkGreen"
+                    android:textColor="@color/DarkGray"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </TableRow>
+            
+
+            <TableRow
+                android:id="@+id/fsjijhsuioj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_light"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Device Utilization"
+                    android:textColor="@color/DarkGray"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/txtdevutil"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1.8"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                   android:textSize="17sp"
+                    android:textColor="@color/DarkGray"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </TableRow>
+
+            
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_header_subheading" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Average Bills per Day"
+                    android:textColor="@color/DarkGray"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="Total Bills"
+                    android:textColor="@color/DarkGray"
+                    android:typeface="normal" />
+            </LinearLayout>
+            
+            
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/detailed_mr_card_row_light" >
+                
+                <TextView
+                    android:id="@+id/txtavgbills"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1.8"
+                    android:gravity="center"
+                    android:textSize="17sp"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/DarkGray"
+                    android:typeface="normal" 
+                    android:textStyle="bold"/>
+
+                
+
+                <TextView
+                   
+                    android:id="@+id/txtTotal"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1.8"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/DarkBlue"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+            
+            
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="4"
+                android:orientation="horizontal">
+                
+                <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/White" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="NORMAL"
+                    android:textStyle="bold"
+                    android:background="@color/detailed_mr_card_header_subheading"
+                    android:textColor="@color/DarkGray"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/txtTariffnormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1.8"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/Green"
+                    android:background="@color/detailed_mr_card_row_light"
+                    android:typeface="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@color/White" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:text="DL"
+                    android:textStyle="bold"
+                    android:background="@color/detailed_mr_card_header_subheading"
+                    android:textColor="@color/DarkGray"
+                    android:typeface="normal" />
+
+                <TextView
+                   
+                    android:id="@+id/txtdl"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1.8"
+                    android:gravity="center"
+                    android:textSize="17sp"
+                    android:textColor="@color/Blue"
+                    android:background="@color/detailed_mr_card_row_light"
+                    android:textStyle="bold"
+                    android:typeface="normal"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@color/WhiteSmoke" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="MNR"
+                    android:textStyle="bold"
+                    android:background="@color/detailed_mr_card_header_subheading"
+                    android:textColor="@color/DarkGray"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/txtTariffmnr"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1.8"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/Red"
+                    android:background="@color/detailed_mr_card_row_light"
+                    android:typeface="normal" />
+            </LinearLayout>
+
+            
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@color/WhiteSmoke" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:background="@color/detailed_mr_card_header_subheading"
+                    android:text="OTHER"
+                    android:textStyle="bold"
+                    android:textColor="@color/DarkGray"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/txtTariffothers"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1.8"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:textColor="@color/DarkMagenta"
+                    android:background="@color/detailed_mr_card_row_light"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+            </LinearLayout>
+            
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@color/detailed_mr_card_header"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/White"
+                android:typeface="normal" />
+        </TableLayout>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:background="@color/detailed_mr_card_header"
+                android:typeface="normal" />
+    </LinearLayout>
+
+</ScrollView>

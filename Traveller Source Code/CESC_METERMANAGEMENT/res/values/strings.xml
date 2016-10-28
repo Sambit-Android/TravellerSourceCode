@@ -1,0 +1,98 @@
+<resources>
+
+    <string name="app_name">Meter Replace Mgmt</string>
+    <string name="section">SECTION</string>
+    <string name="mrcode">MR NAME</string>
+    <string name="disconnection"> Disconnection</string>
+    <string name="appVersion">Discon/Recon</string>
+    <string name="prevrr"> &lt;&lt; </string>
+    <string name="nextrr"> &gt;&gt; </string>
+
+    <string-array name="meter_status">
+        <item>NORMAL</item>
+        <item>ARIAL</item>
+    </string-array>
+    <string-array name="meter_make">
+        <item>SGA</item>
+        <item>TESCOM</item>
+        <item>HAVELLS</item>
+        <item>AVON</item>
+        <item>EMCO</item>
+        <item>UE</item>
+        <item>REMCO</item>
+        <item>TTL</item>
+        <item>SEA HOSSE</item>
+        <item>MESCOMSKRA</item>
+        <item>SECURE</item>
+        <item>CPS LTD</item>
+        <item>L AND T</item>
+        <item>RECOM</item>
+        <item>KPTCL</item>
+        <item>HPL</item>
+        <item>KWH</item>
+        <item>ACTARIS</item>
+        <item>GEC</item>
+        <item>C.G. ACTARIST</item>
+        <item>CONTIMETER</item>
+        <item>BHEL</item>
+        <item>BENTEX-LINGER</item>
+        <item>ECE</item>
+        <item>EAW</item>
+        <item>L AND G</item>
+        <item>RC</item>
+        <item>SIDDIK</item>
+        <item>CAPITAL</item>
+        <item>TEMP</item>
+        <item>IM</item>
+        <item>CONTI</item>
+        <item>ELYMER</item>
+        <item>L AND GYR</item>
+        <item>TTL LTD</item>
+        <item>CESCOM</item>
+        <item>SPC</item>
+        <item>UNKNOWN</item>
+        <item>HAVELS</item>
+        <item>VHEL</item>
+        <item>JAIPUR</item>
+        <item>ISI</item>
+        <item>SIEMENS</item>
+    </string-array>
+    <string-array name="meter_capacity">
+        <item>10-20A</item>
+        <item>3*5-10A</item>
+        <item>2.5-10A</item>
+        <item>3*5-20A</item>
+        <item>10A</item>
+        <item>3*240A</item>
+        <item>5-10A</item>
+        <item>30A</item>
+        <item>2.5-5A</item>
+        <item>5-15A</item>
+        <item>3*10A</item>
+        <item>0</item>
+        <item>3*5A</item>
+        <item>3*5-30A</item>
+        <item>5-30A</item>
+        <item>3*10</item>
+        <item>3-30A</item>
+        <item>UNKNOWN</item>
+        <item>30-60A</item>
+        <item>20A</item>
+        <item>5-20A</item>
+        <item>5A</item>
+    </string-array>
+    <string-array name="meter_cover">
+        <item>Having Cover</item>
+        <item>No Cover</item>
+    </string-array>
+    <string-array name="meter_position">
+        <item>Inside Premisis</item>
+        <item>Outside Premisis</item>
+    </string-array>
+    <string-array name="meter_type">
+        <item>Static</item>
+        <item>Electro Machanical</item>
+        <item>High Precision</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@color/LightLightGrey"
+    android:scrollbars="none" >
+    
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/LightLightGrey"
+    android:orientation="vertical"
+    android:padding="5dp" >
+    
+
+
+
+    
+    
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/androidBlue3" 
+         android:layout_marginTop="8dp"/>
+        
+    
+
+    
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="@drawable/border"
+    android:orientation="vertical"
+      android:layout_marginTop="8dp"
+    >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="App Settings"
+                    android:textColor="@color/androidBlue3"
+                    android:textStyle="bold" 
+                     android:layout_gravity="right"
+                     android:padding="2dp" 
+                     android:layout_marginTop="2dp"
+                     android:layout_marginBottom="2dp"
+                     android:typeface="serif"
+                     android:textSize="18dp"
+                    />
+                    
+ <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/setting_background"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:padding="2dp" 
+        
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:text="Printer "
+            style="@style/setting_test_style"
+             >
+        </TextView>
+     <TextView
+     android:id="@+id/toggle_printer_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:text=": Analogics"
+            android:textColor="@color/DarkGray"
+            android:textStyle="bold" >
+        </TextView>
+
+
+        <ToggleButton
+            android:id="@+id/settings_stationery_type_toggleButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/androidBlue3"
+             android:textOff="Quantum"
+        android:textOn="Analogics" 
+         />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+       android:layout_marginTop="2dp"
+        android:layout_height="1dp"
+        android:background="@color/Black" />
+
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/setting_background"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:layout_marginTop="3dp"
+         >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:text="Roll Option "
+           style="@style/setting_test_style"
+            >
+        </TextView>
+     <TextView
+     android:id="@+id/toggle_printer_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:text=": Analogics"
+            android:textColor="@color/DarkGray"
+            android:textStyle="bold" >
+        </TextView>
+
+
+        <ToggleButton
+            android:id="@+id/settings_rolloption_type_toggleButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+             android:textColor="@color/Green"
+             android:textOff="Old Roll"
+        android:textOn="New Roll"  />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+         android:layout_marginTop="2dp"
+        android:layout_height="1dp"
+        android:background="@color/Black" /> -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/setting_background"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:padding="2dp"
+         android:layout_marginTop="3dp"
+          >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:text="Auto Update"
+            style="@style/setting_test_style">
+        </TextView>
+
+        <ToggleButton
+            android:id="@+id/autoupdate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+             android:textColor="@color/Red"
+            android:text="ToggleButton" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+       style="@style/setting_background"
+        android:baselineAligned="false"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:visibility="gone"
+        
+         >
+
+        <TextView
+            style="@style/setting_test_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="0.70"
+            android:text="@string/devicemanager" />
+
+        <!-- <ImageView
+            android:id="@+id/vewimage"
+            android:layout_marginRight="5dp"
+            android:layout_width="68dp"
+            android:layout_height="42dp"
+           
+            android:src="@drawable/settings_white" /> -->
+
+      <!--   <ToggleButton
+         android:id="@+id/tg_wifi"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="ToggleButton" /> -->
+ 
+        
+       <!--  <ImageView
+            android:id="@+id/sumreport"
+            android:layout_width="120dip"
+            android:layout_height="50dip"
+            android:layout_marginTop="2dp"
+           
+            android:src="@android:drawable/" /> -->
+         <Button
+                    android:id="@+id/btn_device_manager"
+                    android:layout_width="0dip"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    style="@style/btn_stand_for_homepage"
+                    android:text="@string/go_to"
+                    android:textColor="@color/blue_rem"
+                    android:textSize="18sp" 
+                     android:layout_weight="0.35"
+                    />
+        
+        
+    </LinearLayout>
+    
+    
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/setting_background"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:padding="2dp"
+         android:layout_marginTop="3dp"
+         android:visibility="gone"
+          >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:text="@string/enablephoto"
+            style="@style/setting_test_style">
+        </TextView>
+
+        <ToggleButton
+            android:id="@+id/enablephoto"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+             android:textColor="@color/Red"
+            android:text="ToggleButton" />
+    </LinearLayout>
+    
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/setting_background"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:padding="2dp"
+         android:layout_marginTop="3dp"
+          android:layout_marginBottom="10dp"
+          android:visibility="gone"
+          >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:text="@string/enablegps"
+            style="@style/setting_test_style">
+        </TextView>
+
+        <ToggleButton
+            android:id="@+id/enablegps"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+             android:textColor="@color/Red"
+            android:text="ToggleButton" />
+    </LinearLayout>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   </LinearLayout>
+    
+   <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/androidBlue3" 
+         android:layout_marginTop="8dp"/>
+        
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  android:background="@drawable/border"
+    android:orientation="vertical"
+    android:layout_marginTop="8dp"
+    > 
+    
+    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Network Settings"
+                    android:textColor="@color/androidBlue3"
+                    android:textStyle="bold" 
+                     android:layout_gravity="right"
+                     android:padding="2dp" 
+                     android:layout_marginTop="2dp"
+                     android:layout_marginBottom="2dp"
+                      android:typeface="serif"
+                      android:textSize="18dp"
+                    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+       style="@style/setting_background"
+        android:baselineAligned="false"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:padding="2dp"
+         android:layout_marginBottom="20dp"
+         >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:text="Wifi "
+            style="@style/setting_test_style" />
+
+        <ImageView
+            android:id="@+id/vewimage"
+            android:layout_marginRight="5dp"
+            android:layout_width="68dp"
+            android:layout_height="42dp"
+           
+            android:src="@drawable/settings_white" />
+
+        <ToggleButton
+         android:id="@+id/tg_wifi"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="ToggleButton" />
+    </LinearLayout>
+
+          <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+       style="@style/setting_background"
+        android:baselineAligned="false"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:padding="2dp"
+         android:layout_marginBottom="10dp"
+         >
+
+        <TextView
+            android:id="@+id/btn_versionupdate"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:text="            Check For Version Update "
+            style="@style/setting_test_style" />
+
+        
+    </LinearLayout>
+    
+          
+          
+           <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+       style="@style/setting_background"
+        android:baselineAligned="false"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:padding="2dp"
+         android:layout_marginBottom="10dp"
+         >
+
+        <TextView
+            android:id="@+id/btn_batteryUsage"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:text="            Battery Usage "
+            style="@style/setting_test_style" />
+
+        
+    </LinearLayout>
+          
+          
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/LightGrey" />
+
+    <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+         style="@style/setting_background"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:padding="2dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:text="Mobile Data"
+           style="@style/setting_test_style"  >
+        </TextView>
+
+        <ToggleButton
+            android:id="@+id/toggleButton1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton" />
+    </LinearLayout> -->
+</LinearLayout>
+
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  android:background="@drawable/border"
+    android:orientation="vertical"
+    android:layout_marginTop="8dp"
+    android:visibility="invisible"
+    > 
+    
+    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/report"
+                    android:textColor="@color/androidBlue3"
+                    android:textStyle="bold" 
+                     android:layout_gravity="right"
+                     android:padding="2dp" 
+                     android:layout_marginTop="2dp"
+                     android:layout_marginBottom="2dp"
+                      android:typeface="serif"
+                      android:textSize="18dp"
+                    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+       style="@style/setting_background"
+        android:baselineAligned="false"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:padding="2dp"
+         android:layout_marginBottom="10dp"
+         >
+
+        <TextView
+            style="@style/setting_test_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="0.70"
+            android:text="@string/sumreport" />
+
+        <!-- <ImageView
+            android:id="@+id/vewimage"
+            android:layout_marginRight="5dp"
+            android:layout_width="68dp"
+            android:layout_height="42dp"
+           
+            android:src="@drawable/settings_white" /> -->
+
+      <!--   <ToggleButton
+         android:id="@+id/tg_wifi"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="ToggleButton" /> -->
+ 
+        
+       <!--  <ImageView
+            android:id="@+id/sumreport"
+            android:layout_width="120dip"
+            android:layout_height="50dip"
+            android:layout_marginTop="2dp"
+           
+            android:src="@android:drawable/" /> -->
+         <Button
+                    android:id="@+id/btn_summary_report"
+                    android:layout_width="0dip"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    style="@style/btn_stand_for_homepage"
+                    android:text="@string/generate"
+                    android:textColor="@color/blue_rem"
+                    android:textSize="18sp" 
+                     android:layout_weight="0.35"
+                    />
+        
+        
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/LightGrey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+         style="@style/setting_background"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:padding="2dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="0.70"
+            android:singleLine="false"
+            android:text="@string/detailedsumreport"
+           style="@style/setting_test_style"  >
+        </TextView>
+
+      <!--   <ToggleButton
+            android:id="@+id/toggleButton1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton" /> -->
+        
+        
+        <Button
+                    android:id="@+id/btndetailedreports"
+                    android:layout_width="0dip"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                   android:layout_marginRight="5dp"
+                    style="@style/btn_stand_for_homepage"
+                    android:text="@string/generate"
+                    android:textColor="@color/blue_rem"
+                    android:textSize="18sp" 
+                     android:layout_weight="0.35"
+                    />
+    </LinearLayout>
+    
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+         android:layout_marginTop="8dip"
+        android:background="@color/LightGrey" />
+</LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+         android:background="@color/White" 
+         android:layout_marginTop="8dp"/>
+        
+         <ImageView
+        android:id="@+id/imageView_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginTop="8dp"
+         />
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/WhiteSmoke"
+            android:gravity="center"
+            android:orientation="horizontal" >
+            
+
+                
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/bcits_powered" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/White" 
+            android:layout_marginTop="8dp"/>
+</LinearLayout>
+
+
+</ScrollView>

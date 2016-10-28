@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<decorators defaultdir="/WEB-INF/decorators">
+	
+	<decorator name="loginpage" page="loginlayout.jsp">
+		<pattern>/</pattern>
+	</decorator>
+	
+	<decorator name="login" page="loginlayout.jsp">
+		<pattern>/login</pattern>
+	</decorator>
+	
+	<decorator name="registerTicket" page="loginlayout.jsp">
+		<pattern>/registerTicket</pattern>
+	</decorator>
+	
+	<decorator name="siteCodeError" page="loginlayout.jsp">
+		<pattern>/siteCodeError</pattern>
+	</decorator>
+	
+	<decorator name="forgotpassword" page="loginlayout.jsp">
+		<pattern>/forgotpassword</pattern>
+	</decorator>
+	<decorator name="registration" page="loginlayout.jsp">
+		<pattern>/registration</pattern>
+	</decorator>
+	<decorator name="customerRegistration" page="loginlayout.jsp">
+		<pattern>/customerRegistration</pattern>
+	</decorator>
+	<decorator name="custumerLoginPage" page="loginlayout.jsp">
+		<pattern>/custumerLoginPage</pattern>
+	</decorator>
+	
+	<decorator name="logout" page="loginlayout.jsp">
+		<pattern>/logout</pattern>
+	</decorator>
+	
+	<decorator name="lock" page="locklayout.jsp">
+		<pattern>/lock</pattern>
+	</decorator>
+	<decorator name="/lockrelease" page="locklayout.jsp">
+		<pattern>/lockrelease</pattern>
+	</decorator>
+	
+	<decorator name="default" page="defaultlayout.jsp">
+		<pattern>/**</pattern>
+	</decorator>
+	
+</decorators>
+

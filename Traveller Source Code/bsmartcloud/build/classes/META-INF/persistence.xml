@@ -1,0 +1,109 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
+<!-- xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+    http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0"> -->
+
+<!-- RESOURCE_LOCAL - -->
+
+<persistence-unit name="POSTGREDataSource" transaction-type="RESOURCE_LOCAL">
+				<provider>org.hibernate.ejb.HibernatePersistence</provider>
+				 <class>com.bcits.entity.AllConstraintPostgre</class>
+				<class>com.bcits.entity.AllConstrants</class>
+				<class>com.bcits.entity.AllowedDeviceVersionsEntity</class>
+				<class>com.bcits.entity.AllowedDeviceVersionsEntityNew</class>
+				<class>com.bcits.entity.AppActivityEntity</class>
+				<class>com.bcits.entity.AssetTransactionEntity</class>
+				<class>com.bcits.entity.BillingDataEntity</class>
+				<class>com.bcits.entity.CircleDataUpload</class>
+				<class>com.bcits.entity.CircleDetails</class>
+				<class>com.bcits.entity.ComplaintEntity</class>
+				<class>com.bcits.entity.ConsumerComplaintEntity</class>
+				<class>com.bcits.entity.DefectiveMeterEntity</class>
+				<class>com.bcits.entity.Device_Logs_Entity</class>
+				<class>com.bcits.entity.DisconnectionMasterEntity</class>
+				<class>com.bcits.entity.GroupEntity</class>
+				<class>com.bcits.entity.HHBM_ConsumerEntity</class>
+				<class>com.bcits.entity.HHBM_DownloadEntity</class>
+				<class>com.bcits.entity.LocationEntity</class>
+				<class>com.bcits.entity.ManualSubDivDetails</class>
+				<class>com.bcits.entity.MasterDeviceStatusEntity</class>
+				<class>com.bcits.entity.MeterChangeEntity</class>
+				<class>com.bcits.entity.ModuleMasterEntity</class>
+				<class>com.bcits.entity.MRCreditMasterEntity</class>
+				<class>com.bcits.entity.MRDepositEntity</class>
+				<class>com.bcits.entity.MRDeviceAllocationEntity</class>
+				<class>com.bcits.entity.MRDeviceEntity</class>
+				<class>com.bcits.entity.MrGroup</class>
+				<class>com.bcits.entity.MRMasterComPK</class>
+				<class>com.bcits.entity.MRMasterEntity</class>
+				<class>com.bcits.entity.MrMasterOracleEntity</class>
+				<class>com.bcits.entity.NotificationsEntity</class>
+				<class>com.bcits.entity.OnAirVersionUpdationEntity</class>
+				<class>com.bcits.entity.OnAirVersionUpdationEntityNew</class>
+				<class>com.bcits.entity.OracleConstraints</class>
+				<class>com.bcits.entity.Payments</class>
+				<class>com.bcits.entity.PaymentsDataEntity</class>
+				<class>com.bcits.entity.Pg_Class_Entity</class>
+				<class>com.bcits.entity.Pg_Constraint_Entity</class>
+				<class>com.bcits.entity.ResultDisconnection</class>
+				<class>com.bcits.entity.Resultspaymets</class>
+				<class>com.bcits.entity.SchemaValue</class>
+				<class>com.bcits.entity.SiteDetails</class>
+				<class>com.bcits.entity.SiteLocationEntity</class>
+				<class>com.bcits.entity.TheftRecordingEntity</class>
+				<class>com.bcits.entity.User</class>
+				<class>com.bcits.entity.UserDetails</class>
+				<class>com.bcits.entity.VigilanceComplaintEntity</class>
+				<class>com.bcits.entity.VigilanceTheftEntity</class>
+    <!-- org.hibernate.dialect.PostgreSQLDialect -->
+    <!-- org.hibernate.dialect.Oracle10gDialect -->
+<properties>
+<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+<property name="hibernate.hbm2ddl.auto" value="none" />
+<property name="hibernate.show_sql" value="false" />
+</properties>
+</persistence-unit> 
+
+<persistence-unit name="ORACLEDataSource" transaction-type="RESOURCE_LOCAL">
+<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+<class>com.bcits.entity.MrMasterOracleEntity</class>
+<class>com.bcits.entity.EmployeeOracleEntity</class>
+<class>com.bcits.entity.LocationOracleEntity</class>
+<class>com.bcits.entity.BillingProgressEntity</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+<!--DB configuration for Oracle -->
+<properties>
+
+      <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+<property name="hibernate.hbm2ddl.auto" value="none" />
+<property name="hibernate.show_sql" value="false" />
+<!-- <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider" />
+<property name="hibernate.jdbc.batch_size" value="20"/>
+
+<property name="hibernate.cache.use_query_cache" value="true"/>
+<property name="hibernate.cache.use_second_level_cache" value="true"/>
+ -->
+
+</properties>
+</persistence-unit>
+
+<!-- JTA - -->
+
+<!-- <persistence-unit name="bsmartSpringApp" transaction-type="JTA">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <jta-data-source>java:jboss/datasources/BsmartDS</jta-data-source>
+    
+ <class>com.bcits.entity.User</class>
+  
+    <properties>
+      <property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.JBossTransactionManagerLookup"/>
+    <property name="jboss.entity.manager.factory.jndi.name" value="java:/bsmartSpringApp"/>
+    <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
+      <property name="hibernate.hbm2ddl.auto" value="none"/>
+    </properties>
+  </persistence-unit> -->
+
+</persistence>

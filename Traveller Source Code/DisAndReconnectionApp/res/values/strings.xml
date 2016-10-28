@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Diss And Reconnect</string>
+    <string name="appVersion">CESC</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_found">No devices found</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Bluetooth Chat.</string>
+    <string name="connect">Connect a device</string>
+    <string name="discoverable">Make discoverable</string>
+    <string name="title_not_connected">Not connected</string>
+    <string name="not_connected">You are not connected to a device</string>
+    <string name="title_connected_to">Connected: </string>
+    <string name="title_connecting">Connecting ...</string>
+    <string name="LoggingInPleasewait">Logging In. Please wait </string>
+    <string name="disconnectReconn">Disconnection &amp; Reconnection</string>
+    <string name="NetworkProblem">Network Problem </string>
+    <string name="Info"> Info </string>
+    <string name="OK"> OK </string>
+    <string name="NO"> NO </string>
+    <string name="Loginfrommobile"> Login from mobile </string>
+    <string name="InvalidCredentials">Invalid Credentials or Not Active</string>
+    <string name="LoginfrommobileInvalidCredentials"> Login from mobile\nInvalid Credentials </string>
+    <string name="Yes">YES </string>
+
+    <string-array name="loginCategory">
+        <item>ACCOUNTING UNIT</item>
+        <item>SUB-DIVISION</item>
+        <item>DIVISION</item>
+        <item>CIRCLE</item>
+        <item>CORPORATE</item>
+    </string-array>
+    <string-array name="locationCategory">
+        <item>CIRCLE</item>
+        <item>DIVISION</item>
+        <item>SUB-DIVISION</item>
+        <item>SECTION</item>
+    </string-array>
+    <string-array name="allLocations">
+        <item>4140 - ALUR</item>
+        <item>4320 - ARAKALUGUDU</item>
+        <item>3334 - ARAKERE</item>
+        <item>4410 - ARASIKERE</item>
+        <item>4133 - AREHALLY</item>
+        <item>4420 - BANAVARA</item>
+        <item>1340 - BANNUR</item>
+        <item>2150 - BEGUR</item>
+        <item>3420 - BELLUR</item>
+        <item>4130 - BELUR</item>
+        <item>2251 - BETTADAPURA</item>
+        <item>3213 - BHARTINAGARA</item>
+        <item>2250 - BILIKERE</item>
+        <item>2110 - CHNAGARA-URBAN</item>
+        <item>4210 - CR PATANA</item>
+        <item>7111 - DEODURGA</item>
+        <item>4423 - DM KURKE</item>
+        <item>4430 - GANDASI</item>
+        <item>2421 - GONNIKOPAL</item>
+        <item>2130 - GUNDLEPET</item>
+        <item>3243 - HALAGUR</item>
+        <item>4132 - HALEBEEDU</item>
+        <item>4340 - HANGARAHALLI</item>
+        <item>2320 - HANUR</item>
+        <item>2121 - HARADANHALLI</item>
+        <item>4120 - HASAN RURAL-1</item>
+        <item>4160 - HASAN RURAL-2</item>
+        <item>2220 - HD- KOTE</item>
+        <item>4223 - HIRISAVE</item>
+        <item>4310 - HN PURA</item>
+        <item>2120 - HUNSUR</item>
+        <item>1243 - JAYAPURA</item>
+        <item>1123 - KADAKOLA</item>
+        <item>3134 - KERAGODU_RSD2</item>
+        <item>3344 - KIKKERI</item>
+        <item>3242 - KIRUGAVALU</item>
+        <item>2310 - KOLLEGALA</item>
+        <item>4351 - KONANUR</item>
+        <item>3123 - KOTHATHI1_RSD1</item>
+        <item>3320 - KR PET-1</item>
+        <item>3345 - KR PET-2</item>
+        <item>2230 - KR-NAGAR</item>
+        <item>2431 - KUSHALNAGAR</item>
+        <item>3210 - MADDUR-1</item>
+        <item>3220 - MADDUR-2</item>
+        <item>2411 - MADIKERI</item>
+        <item>3230 - MALAVALLI-1</item>
+        <item>3240 - MALAVALLI-2</item>
+        <item>9008 - MALAVALLI-2 (TEST)</item>
+        <item>3315 - MELUKOTE</item>
+        <item>2412 - MURNAD</item>
+        <item>3411 - NAGAMANGALA</item>
+        <item>1320 - NANJUNGUD-RURAL</item>
+        <item>1310 - NANJUNGUD-URBAN</item>
+        <item>4220 - NUGGEHALLI</item>
+        <item>3310 - PANDAVAPURA</item>
+        <item>2240 - PERIYAPATTANA</item>
+        <item>4350 - RAMANANTHAPURA</item>
+        <item>4214 - S.BELAGOLA</item>
+        <item>4150 - SAKALESHPURA</item>
+        <item>4330 - SALIGRAMA</item>
+        <item>2140 - SANTHEMARALLI</item>
+        <item>2260 - SARAGURU</item>
+        <item>2434 - SHANIVARSANTHE</item>
+        <item>1136 - SIDDALINGAPURA</item>
+        <item>2433 - SOMWARPET</item>
+        <item>3330 - SR PATNA</item>
+        <item>2432 - SUNTIKOPPA</item>
+        <item>1330 - T-NARASHIPURA</item>
+        <item>9000 - TEST SECTION (BELU)</item>
+        <item>9003 - TEST SECTION (BHAR)</item>
+        <item>9013 - TEST SECTION (HASR1_1100)</item>
+        <item>9010 - TEST SECTION (HASR2)</item>
+        <item>9012 - TEST SECTION (HASR2_1100)</item>
+        <item>9001 - TEST SECTION (HIRI)</item>
+        <item>9002 - TEST SECTION (SBEL)</item>
+        <item>9005 - TEST-BANAVARA</item>
+        <item>9004 - TEST-BANNUR</item>
+        <item>9009 - TEST_GK</item>
+        <item>9011 - TEST_SECTION(ALUR)</item>
+        <item>1115 - VARUNA</item>
+        <item>2422 - VIRAJPET</item>
+        <item>2330 - YALANDUR</item>
+        <item>9014 - YELWALA(TEST)</item>
+        <item>1223 - YELWALA</item>
+    </string-array>
+
+</resources>

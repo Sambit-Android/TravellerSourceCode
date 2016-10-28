@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+  <item
+        android:id="@+id/billingdetails"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Billing Details"/>
+  <item
+        android:id="@+id/paymentdetails"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Payment Details"/>
+  <item
+        android:id="@+id/depositdetails"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Deposit Details"/>
+  <item
+        android:id="@+id/meterdetails"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Meter Details"/>
+  <item
+        android:id="@+id/meterchangedetails"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Meter Change Details"/>
+  <item
+        android:id="@+id/btn_back"
+        android:icon="@drawable/back"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="Back"/>
+
+</menu>

@@ -1,0 +1,147 @@
+# view AndroidManifest.xml #generated:217
+-keep class activity.dlms.lib.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:226
+-keep class amr.bluetooth.ble.BluetoothMReader { <init>(...); }
+
+# view AndroidManifest.xml #generated:225
+-keep class amr.bluetooth.ble.DeviceScanActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:189
+-keep class amr.utils.BootReciever { <init>(...); }
+
+# view AndroidManifest.xml #generated:202
+-keep class amr.utils.DummyUsbReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:187
+-keep class amr.utils.UsbRecieverService { <init>(...); }
+
+# view AndroidManifest.xml #generated:168
+-keep class bcits.camera.lib.CheckImageQuality { <init>(...); }
+
+# view AndroidManifest.xml #generated:163
+-keep class bcits.camera.lib.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:182
+-keep class bcits.rf.catcher.GroupBilling { <init>(...); }
+
+# view AndroidManifest.xml #generated:178
+-keep class bcits.rf.catcher.SingleBilling { <init>(...); }
+
+# view AndroidManifest.xml #generated:114
+-keep class com.auto.update.AndroidautoUpdateActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:110
+-keep class com.auto.update.InstallApk { <init>(...); }
+
+# view AndroidManifest.xml #generated:118
+-keep class com.auto.update.ManualVersionUpdateActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:100
+-keep class com.bcits.bsmartbilling.BluetoothChat { <init>(...); }
+
+# view AndroidManifest.xml #generated:129
+-keep class com.bcits.bsmartbilling.BluetoothChat_Reports { <init>(...); }
+
+# view AndroidManifest.xml #generated:87
+-keep class com.bcits.bsmartbilling.CameraActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:105
+-keep class com.bcits.bsmartbilling.DeviceListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:141
+-keep class com.bcits.bsmartbilling.LiveStatusService { <init>(...); }
+
+# view AndroidManifest.xml #generated:72
+-keep class com.bcits.bsmartbilling.Login { <init>(...); }
+
+# view AndroidManifest.xml #generated:58
+-keep class com.bcits.bsmartbilling.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:84
+-keep class com.bcits.bsmartbilling.MeterReading { <init>(...); }
+
+# view AndroidManifest.xml #generated:80
+-keep class com.bcits.bsmartbilling.Meterobservation { <init>(...); }
+
+# view AndroidManifest.xml #generated:139
+-keep class com.bcits.bsmartbilling.MyAlarmService { <init>(...); }
+
+# view AndroidManifest.xml #generated:91
+-keep class com.bcits.bsmartbilling.PrintBillAction { <init>(...); }
+
+# view AndroidManifest.xml #generated:125
+-keep class com.bcits.bsmartbilling.ReportActionClass { <init>(...); }
+
+# view AndroidManifest.xml #generated:132
+-keep class com.bcits.bsmartbilling.ReportViewHelper { <init>(...); }
+
+# view AndroidManifest.xml #generated:76
+-keep class com.bcits.bsmartbilling.SearchActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:122
+-keep class com.bcits.bsmartbilling.SettingsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:95
+-keep class com.bcits.bsmartbilling.ShowImage { <init>(...); }
+
+# view AndroidManifest.xml #generated:62
+-keep class com.bcits.bsmartbilling.SplashActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:135
+-keep class com.bcits.bsmartbilling.ViewUnBilledList { <init>(...); }
+
+# view AndroidManifest.xml #generated:223
+-keep class utils.bcits.UsbRecieverService { <init>(...); }
+
+# onClick res/layout/dlms_main.xml #generated:249
+-keepclassmembers class * { *** btnResetLogcat(...); }
+
+# onClick res/layout/dlms_main.xml #generated:235
+-keepclassmembers class * { *** btnSeeLogcat(...); }
+
+# onClick res/layout/dlms_main.xml #generated:119
+-keepclassmembers class * { *** onClickConnectAndRead(...); }
+
+# onClick res/layout/dlms_main.xml #generated:211
+-keepclassmembers class * { *** onClickGoForBilling(...); }
+
+# onClick res/layout/main_rf.xml #generated:14
+-keepclassmembers class * { *** onClickGroupBilling(...); }
+
+# onClick res/layout/dlms_main.xml #generated:85
+-keepclassmembers class * { *** onClickMeterNext(...); }
+
+# onClick res/layout/dlms_main.xml #generated:65
+-keepclassmembers class * { *** onClickMeterPrev(...); }
+
+# onClick res/layout/rf_main.xml #generated:200
+-keepclassmembers class * { *** onClickMultiBillingRF(...); }
+
+# onClick res/layout/rf_main.xml #generated:80
+-keepclassmembers class * { *** onClickOneTapBilling(...); }
+
+# onClick res/layout/rf_main.xml #generated:100
+-keepclassmembers class * { *** onClickOneTapDisconnect(...); }
+
+# onClick res/layout/rf_main.xml #generated:113
+-keepclassmembers class * { *** onClickOneTapReconnect(...); }
+
+# onClick res/layout/rf_main.xml #generated:179
+-keepclassmembers class * { *** onClickRadioLong(...); }
+
+# onClick res/layout/rf_main.xml #generated:169
+-keepclassmembers class * { *** onClickRadioNormal(...); }
+
+# onClick res/layout/rf_main.xml #generated:161
+-keepclassmembers class * { *** onClickRadioShort(...); }
+
+# onClick res/layout/dlms_main.xml #generated:263
+-keepclassmembers class * { *** onClickSendLogFile(...); }
+
+# onClick res/layout/main_rf.xml #generated:8
+-keepclassmembers class * { *** onClickSingleBilling(...); }
+
+# onClick res/layout/rf_main.xml #generated:214
+-keepclassmembers class * { *** onClickStopDiscovery(...); }
+

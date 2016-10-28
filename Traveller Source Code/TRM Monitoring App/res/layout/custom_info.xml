@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:textSize="18dp"
+        android:text="abcdef"
+        android:background="#F6DDCC"
+        android:textStyle="bold" />
+
+    <TextView android:text="abcdef"
+        android:id="@+id/info1"
+        android:background="#FAE5D3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView android:clickable="true"
+        android:id="@+id/info2"
+        android:text="abcdef"
+        android:background="#FAE5D3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/info3"
+        android:text="abcdef"
+        android:background="#FAE5D3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/info4"
+        android:text="abcdef"
+        android:background="#FAE5D3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/info5"
+        android:text="abcdef"
+        android:background="#FAE5D3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/info6"
+        android:text="abcdef"
+        android:background="#FAE5D3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/info7"
+        android:text="abcdef"
+        android:background="#FAE5D3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/info8"
+        android:text="abcdef"
+        android:background="#FAE5D3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+    
+    
+    <TextView
+        android:id="@+id/info9"
+        android:text="abcdef"
+        android:background="#FAE5D3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/netamtduetxt"
+        android:text="abcdef"
+        android:background="#FAE5D3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+</LinearLayout>

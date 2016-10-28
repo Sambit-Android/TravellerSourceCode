@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:id="@+id/linearId"
+    android:layout_height="40dp"
+    android:background="#499DF5"
+    android:gravity="bottom|center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="5dip"
+         >
+
+        <ImageView
+            android:id="@+id/header"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="@string/appVersion"
+            android:textColor="@color/White"
+            android:textSize="18sp"
+            android:textStyle="bold" >
+        </TextView>
+
+        
+        
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:paddingRight="5dip" android:layout_weight="0.29">
+        <TextView android:id="@+id/title_right_textll"
+    		android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:textSize="18sp"
+             android:layout_gravity="center_vertical"
+            android:text=" " 
+            android:textColor="@android:color/white"
+            android:paddingBottom="1dp"
+            ></TextView>
+    
+    </LinearLayout>
+       
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/LightGrey" />
+
+</LinearLayout>
